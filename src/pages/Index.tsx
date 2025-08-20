@@ -105,11 +105,11 @@ const Index = () => {
       <div className="bg-gradient-to-r from-secondary/40 via-card to-muted/40 border-b-2 border-border shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="text-center mb-8">
-            <h1 className="font-serif text-6xl text-primary mb-4">
+            <h1 className="font-serif text-5xl text-primary mb-4">
               Mother's Good Taste 妈妈的味道
             </h1>
-            <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
-              "From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too."
+            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+              "🧑🏼‍🍳✍🏼 From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too."
             </p>
           </div>
 
