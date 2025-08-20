@@ -27,11 +27,11 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
       )}
       
       <CardHeader className="pb-3">
-        <CardTitle className="font-script text-2xl text-primary line-clamp-2 hover:text-primary/80 transition-colors">
+        <CardTitle className="font-serif text-2xl text-primary line-clamp-2 hover:text-primary/80 transition-colors">
           {recipe.title}
         </CardTitle>
         {recipe.description && (
-          <CardDescription className="font-handwritten text-base text-muted-foreground line-clamp-2">
+          <CardDescription className="font-sans text-base text-muted-foreground line-clamp-2">
             {recipe.description}
           </CardDescription>
         )}
@@ -40,13 +40,13 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
       <CardContent className="pb-4">
         <div className="flex flex-wrap gap-2 mb-4">
           {recipe.cookingTime && (
-            <Badge variant="secondary" className="font-handwritten text-sm bg-secondary/80 text-secondary-foreground">
+            <Badge variant="secondary" className="font-sans text-sm bg-secondary/80 text-secondary-foreground">
               <Clock className="w-3 h-3 mr-1" />
               {recipe.cookingTime}
             </Badge>
           )}
           {recipe.servings && (
-            <Badge variant="secondary" className="font-handwritten text-sm bg-secondary/80 text-secondary-foreground">
+            <Badge variant="secondary" className="font-sans text-sm bg-secondary/80 text-secondary-foreground">
               <Users className="w-3 h-3 mr-1" />
               {recipe.servings}
             </Badge>
@@ -55,8 +55,8 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
 
         {recipe.ingredients.length > 0 && (
           <div className="mb-3">
-            <h4 className="font-script text-lg text-primary mb-2">Key Ingredients:</h4>
-            <p className="font-handwritten text-sm text-muted-foreground line-clamp-2">
+            <h4 className="font-elegant text-lg text-primary mb-2">Key Ingredients:</h4>
+            <p className="font-sans text-sm text-muted-foreground line-clamp-2">
               {recipe.ingredients.slice(0, 3).join(", ")}
               {recipe.ingredients.length > 3 && "..."}
             </p>
@@ -65,8 +65,8 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
 
         {recipe.steps.length > 0 && (
           <div>
-            <h4 className="font-script text-lg text-primary mb-2">Recipe Preview:</h4>
-            <p className="font-handwritten text-sm text-muted-foreground line-clamp-3">
+            <h4 className="font-elegant text-lg text-primary mb-2">Recipe Preview:</h4>
+            <p className="font-sans text-sm text-muted-foreground line-clamp-3">
               {recipe.steps[0]}
             </p>
           </div>
@@ -78,7 +78,7 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
           <Button
             onClick={() => onView(recipe)}
             variant="outline"
-            className="flex-1 font-handwritten border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="flex-1 font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             <Eye className="w-4 h-4 mr-2" />
             View Recipe
@@ -87,7 +87,7 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
             onClick={() => onEdit(recipe)}
             variant="outline"
             size="sm"
-            className="font-handwritten border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
+            className="font-sans border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
           >
             <Edit2 className="w-4 h-4" />
           </Button>

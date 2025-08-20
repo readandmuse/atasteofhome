@@ -19,10 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'handwritten': ['Caveat', 'cursive'],
-				'script': ['Dancing Script', 'cursive'],
-				'casual': ['Kalam', 'cursive'],
-				'elegant': ['Playfair Display', 'serif'],
+				'serif': ['Noto Serif SC', 'Crimson Text', 'serif'],
+				'sans': ['Noto Sans SC', 'system-ui', 'sans-serif'],
+				'elegant': ['Lora', 'Noto Serif SC', 'serif'],
+				'script': ['Crimson Text', 'Noto Serif SC', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

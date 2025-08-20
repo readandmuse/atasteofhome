@@ -20,7 +20,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
             onClick={onBack}
             variant="outline"
             size="sm"
-            className="font-handwritten border-border text-foreground hover:bg-secondary"
+            className="font-sans border-border text-foreground hover:bg-secondary"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Recipes
@@ -29,7 +29,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
             onClick={() => onEdit(recipe)}
             variant="outline"
             size="sm"
-            className="font-handwritten border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
             <Edit className="w-4 h-4 mr-2" />
             Edit Recipe
@@ -39,24 +39,24 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
         {/* Recipe Title Card */}
         <Card className="mb-6 bg-gradient-to-r from-card via-secondary/20 to-card border-2 border-border shadow-lg">
           <CardHeader className="text-center py-8">
-            <CardTitle className="font-script text-5xl text-primary mb-4">
+            <CardTitle className="font-serif text-5xl text-primary mb-4">
               {recipe.title}
             </CardTitle>
             {recipe.description && (
-              <p className="font-handwritten text-xl text-muted-foreground max-w-2xl mx-auto italic">
+              <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto italic">
                 "{recipe.description}"
               </p>
             )}
             
             <div className="flex justify-center gap-4 mt-6">
               {recipe.cookingTime && (
-                <Badge variant="secondary" className="font-handwritten text-base px-4 py-2 bg-secondary text-secondary-foreground">
+                <Badge variant="secondary" className="font-sans text-base px-4 py-2 bg-secondary text-secondary-foreground">
                   <Clock className="w-4 h-4 mr-2" />
                   {recipe.cookingTime}
                 </Badge>
               )}
               {recipe.servings && (
-                <Badge variant="secondary" className="font-handwritten text-base px-4 py-2 bg-secondary text-secondary-foreground">
+                <Badge variant="secondary" className="font-sans text-base px-4 py-2 bg-secondary text-secondary-foreground">
                   <Users className="w-4 h-4 mr-2" />
                   {recipe.servings}
                 </Badge>
@@ -69,7 +69,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
         {recipe.photos && recipe.photos.length > 0 && (
           <Card className="mb-6 bg-card border-2 border-border">
             <CardHeader>
-              <CardTitle className="font-script text-2xl text-primary flex items-center gap-2">
+              <CardTitle className="font-elegant text-2xl text-primary flex items-center gap-2">
                 <Image className="w-6 h-6" />
                 Recipe Photos
               </CardTitle>
@@ -94,7 +94,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
           {/* Ingredients */}
           <Card className="bg-secondary/30 border-2 border-border h-fit">
             <CardHeader className="bg-secondary/50 border-b border-border">
-              <CardTitle className="font-script text-3xl text-primary">
+              <CardTitle className="font-elegant text-3xl text-primary">
                 Ingredients
               </CardTitle>
             </CardHeader>
@@ -103,9 +103,9 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
                 {recipe.ingredients.map((ingredient, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 font-handwritten text-lg text-foreground"
+                    className="flex items-start gap-3 font-sans text-lg text-foreground"
                   >
-                    <span className="font-script text-primary text-xl min-w-6">
+                    <span className="font-elegant text-primary text-xl min-w-6">
                       •
                     </span>
                     <span>{ingredient}</span>
@@ -118,7 +118,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
           {/* Instructions */}
           <Card className="bg-accent/30 border-2 border-border">
             <CardHeader className="bg-accent/50 border-b border-border">
-              <CardTitle className="font-script text-3xl text-primary">
+              <CardTitle className="font-elegant text-3xl text-primary">
                 Instructions
               </CardTitle>
             </CardHeader>
@@ -126,10 +126,10 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
               <ol className="space-y-4">
                 {recipe.steps.map((step, index) => (
                   <li key={index} className="flex gap-4">
-                    <span className="font-script text-2xl text-primary min-w-8 bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center border border-primary">
+                    <span className="font-elegant text-2xl text-primary min-w-8 bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center border border-primary">
                       {index + 1}
                     </span>
-                    <p className="font-handwritten text-lg text-foreground leading-relaxed pt-1">
+                    <p className="font-sans text-lg text-foreground leading-relaxed pt-1">
                       {step}
                     </p>
                   </li>
@@ -143,12 +143,12 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
         {recipe.notes && (
           <Card className="mt-6 bg-muted/30 border-2 border-border">
             <CardHeader>
-              <CardTitle className="font-script text-2xl text-primary">
+              <CardTitle className="font-elegant text-2xl text-primary">
                 Special Notes
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="font-handwritten text-lg text-muted-foreground italic leading-relaxed">
+              <p className="font-sans text-lg text-muted-foreground italic leading-relaxed">
                 {recipe.notes}
               </p>
             </CardContent>
@@ -157,7 +157,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
 
         {/* Journal-style footer */}
         <div className="mt-8 text-center">
-          <p className="font-script text-lg text-muted-foreground">
+          <p className="font-elegant text-lg text-muted-foreground">
             "Made with love, preserved with care"
           </p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-2"></div>

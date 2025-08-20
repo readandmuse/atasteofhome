@@ -117,10 +117,10 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
     <div className="min-h-screen bg-background p-4">
       <Card className="max-w-4xl mx-auto bg-card shadow-lg border-2 border-border">
         <CardHeader className="text-center border-b border-border bg-gradient-to-r from-secondary/30 to-muted/30">
-          <CardTitle className="font-script text-4xl text-primary mb-2">
+          <CardTitle className="font-serif text-4xl text-primary mb-2">
             {recipe ? "Edit Recipe" : "New Recipe"}
           </CardTitle>
-          <CardDescription className="font-handwritten text-lg text-muted-foreground">
+          <CardDescription className="font-sans text-lg text-muted-foreground">
             "Every recipe tells a story of love and tradition"
           </CardDescription>
         </CardHeader>
@@ -130,37 +130,37 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
             {/* Basic Info */}
             <div className="space-y-4">
               <div>
-                <Label className="font-handwritten text-lg text-foreground">Recipe Title</Label>
+                <Label className="font-sans text-lg text-foreground">Recipe Title</Label>
                 <Input
                   {...register("title", { required: true })}
-                  className="font-handwritten text-lg mt-2 bg-background border-2 border-border focus:border-primary"
+                  className="font-sans text-lg mt-2 bg-background border-2 border-border focus:border-primary"
                   placeholder="Mom's famous apple pie..."
                 />
               </div>
 
               <div>
-                <Label className="font-handwritten text-lg text-foreground">Description</Label>
+                <Label className="font-sans text-lg text-foreground">Description</Label>
                 <Textarea
                   {...register("description")}
-                  className="font-handwritten text-base mt-2 bg-background border-2 border-border focus:border-primary min-h-20"
+                  className="font-sans text-base mt-2 bg-background border-2 border-border focus:border-primary min-h-20"
                   placeholder="A brief story about this recipe..."
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="font-handwritten text-lg text-foreground">Cooking Time</Label>
+                  <Label className="font-sans text-lg text-foreground">Cooking Time</Label>
                   <Input
                     {...register("cookingTime")}
-                    className="font-handwritten text-base mt-2 bg-background border-2 border-border focus:border-primary"
+                    className="font-sans text-base mt-2 bg-background border-2 border-border focus:border-primary"
                     placeholder="45 minutes"
                   />
                 </div>
                 <div>
-                  <Label className="font-handwritten text-lg text-foreground">Servings</Label>
+                  <Label className="font-sans text-lg text-foreground">Servings</Label>
                   <Input
                     {...register("servings")}
-                    className="font-handwritten text-base mt-2 bg-background border-2 border-border focus:border-primary"
+                    className="font-sans text-base mt-2 bg-background border-2 border-border focus:border-primary"
                     placeholder="4-6 people"
                   />
                 </div>
@@ -170,13 +170,13 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
             {/* Ingredients */}
             <div className="bg-secondary/20 p-6 rounded-lg border border-border">
               <div className="flex items-center justify-between mb-4">
-                <Label className="font-script text-2xl text-primary">Ingredients</Label>
+                <Label className="font-elegant text-2xl text-primary">Ingredients</Label>
                 <Button
                   type="button"
                   onClick={addIngredient}
                   variant="outline"
                   size="sm"
-                  className="font-handwritten border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
                   <Plus className="w-4 h-4 mr-1" />
                   Add
@@ -188,7 +188,7 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
                     <Input
                       value={ingredient}
                       onChange={(e) => updateIngredient(index, e.target.value)}
-                      className="font-handwritten text-base bg-background border border-border focus:border-primary"
+                      className="font-sans text-base bg-background border border-border focus:border-primary"
                       placeholder="1 cup flour, 2 eggs, etc..."
                     />
                     {ingredients.length > 1 && (
@@ -210,13 +210,13 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
             {/* Steps */}
             <div className="bg-accent/20 p-6 rounded-lg border border-border">
               <div className="flex items-center justify-between mb-4">
-                <Label className="font-script text-2xl text-primary">Recipe Steps</Label>
+                <Label className="font-elegant text-2xl text-primary">Recipe Steps</Label>
                 <Button
                   type="button"
                   onClick={addStep}
                   variant="outline"
                   size="sm"
-                  className="font-handwritten border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
                   <Plus className="w-4 h-4 mr-1" />
                   Add Step
@@ -225,14 +225,14 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
               <div className="space-y-4">
                 {steps.map((step, index) => (
                   <div key={index} className="flex gap-3">
-                    <div className="font-script text-xl text-primary mt-2 min-w-8">
+                    <div className="font-elegant text-xl text-primary mt-2 min-w-8">
                       {index + 1}.
                     </div>
                     <div className="flex-1 flex gap-2">
                       <Textarea
                         value={step}
                         onChange={(e) => updateStep(index, e.target.value)}
-                        className="font-handwritten text-base bg-background border border-border focus:border-primary min-h-16"
+                        className="font-sans text-base bg-background border border-border focus:border-primary min-h-16"
                         placeholder="Describe this step in detail..."
                       />
                       {steps.length > 1 && (
@@ -254,7 +254,7 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
 
             {/* Photo Upload */}
             <div className="bg-muted/20 p-6 rounded-lg border border-border">
-              <Label className="font-script text-2xl text-primary mb-4 block">Photos</Label>
+              <Label className="font-elegant text-2xl text-primary mb-4 block">Photos</Label>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <input
@@ -269,7 +269,7 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
                     type="button"
                     onClick={() => document.getElementById("photo-upload")?.click()}
                     variant="outline"
-                    className="font-handwritten border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     <Upload className="w-4 h-4 mr-2" />
                     Upload Photos
@@ -303,10 +303,10 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
 
             {/* Notes */}
             <div>
-              <Label className="font-script text-2xl text-primary mb-2 block">Special Notes</Label>
+              <Label className="font-elegant text-2xl text-primary mb-2 block">Special Notes</Label>
               <Textarea
                 {...register("notes")}
-                className="font-handwritten text-base bg-background border-2 border-border focus:border-primary min-h-24"
+                className="font-sans text-base bg-background border-2 border-border focus:border-primary min-h-24"
                 placeholder="Any special tips, memories, or variations..."
               />
             </div>
@@ -317,13 +317,13 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
               type="button"
               onClick={onCancel}
               variant="outline"
-              className="font-handwritten text-base px-8 border-border text-foreground hover:bg-secondary"
+              className="font-sans text-base px-8 border-border text-foreground hover:bg-secondary"
             >
               Cancel
             </Button>
             <Button
               type="submit"
-              className="font-handwritten text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="font-sans text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               {recipe ? "Update Recipe" : "Save Recipe"}
             </Button>
