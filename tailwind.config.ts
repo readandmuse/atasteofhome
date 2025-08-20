@@ -19,10 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'serif': ['Noto Serif SC', 'Crimson Text', 'serif'],
+				'serif': ['Playfair Display', 'Noto Serif SC', 'serif'],
 				'sans': ['Noto Sans SC', 'system-ui', 'sans-serif'],
-				'elegant': ['Lora', 'Noto Serif SC', 'serif'],
-				'script': ['Crimson Text', 'Noto Serif SC', 'serif'],
+				'elegant': ['Playfair Display', 'Noto Serif SC', 'serif'],
+				'script': ['Playfair Display', 'Noto Serif SC', 'serif'],
+				'playfair': ['Playfair Display', 'Noto Serif SC', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
