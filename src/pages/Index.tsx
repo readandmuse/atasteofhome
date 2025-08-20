@@ -109,7 +109,7 @@ const Index = () => {
               Mother's Recipe Diary
             </h1>
             <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
-              "A collection of treasured family recipes, passed down through generations with love"
+              "Digitalising a mother's homemade recipes that were written in 2011 by her daughter."
             </p>
           </div>
 
