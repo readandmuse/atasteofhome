@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlusCircle, BookOpen } from "lucide-react";
@@ -7,6 +7,9 @@ import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import sampleApplePie from "@/assets/sample-apple-pie.jpg";
 import sampleIngredients from "@/assets/sample-ingredients.jpg";
+import { Link } from "react-router-dom";
+import type { Session } from "@supabase/supabase-js";
+import { supabase } from "@/integrations/supabase/client";
 
 // Sample recipe data
 const sampleRecipe: Recipe = {
@@ -46,6 +49,21 @@ const Index = () => {
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
+  const [session, setSession] = useState<Session | null>(null);
+
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setSession(session);
+    });
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  const canAdd = session?.user?.email === "jotan.work@gmail.com";
 
   const handleSaveRecipe = (recipe: Recipe) => {
     if (editingRecipe) {
@@ -114,14 +132,20 @@ const Index = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button
-              onClick={handleNewRecipe}
-              size="lg"
-              className="font-sans text-lg px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
-            >
-              <PlusCircle className="w-5 h-5 mr-2" />
-              Add New Recipe
-            </Button>
+            {canAdd ? (
+              <Button
+                onClick={handleNewRecipe}
+                size="lg"
+                className="font-sans text-lg px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+              >
+                <PlusCircle className="w-5 h-5 mr-2" />
+                Add New Recipe
+              </Button>
+            ) : (
+              <Button size="lg" variant="secondary" className="font-sans text-lg px-8 py-3" asChild>
+                <Link to="/auth">Sign in to add recipes</Link>
+              </Button>
+            )}
           </div>
         </div>
       </div>
@@ -143,13 +167,19 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button
-                  onClick={handleNewRecipe}
-                  className="w-full font-sans text-base bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  <PlusCircle className="w-4 h-4 mr-2" />
-                  Add Your First Recipe
-                </Button>
+                {canAdd ? (
+                  <Button
+                    onClick={handleNewRecipe}
+                    className="w-full font-sans text-base bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    <PlusCircle className="w-4 h-4 mr-2" />
+                    Add Your First Recipe
+                  </Button>
+                ) : (
+                  <Button variant="secondary" className="w-full font-sans text-base" asChild>
+                    <Link to="/auth">Sign in to add recipes</Link>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           </div>
