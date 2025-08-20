@@ -18,6 +18,12 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'handwritten': ['Caveat', 'cursive'],
+				'script': ['Dancing Script', 'cursive'],
+				'casual': ['Kalam', 'cursive'],
+				'elegant': ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

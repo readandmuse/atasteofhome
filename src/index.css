@@ -8,33 +8,41 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Journal/Notebook color palette */
+    --background: 45 29% 97%; /* Cream/off-white paper */
+    --foreground: 25 25% 20%; /* Dark brown ink */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 42 33% 95%; /* Slightly yellowed paper */
+    --card-foreground: 25 25% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 42 33% 95%;
+    --popover-foreground: 25 25% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 15 75% 55%; /* Warm terracotta/rust */
+    --primary-foreground: 45 29% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 45% 85%; /* Warm beige */
+    --secondary-foreground: 25 25% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 45% 85%;
+    --muted-foreground: 25 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 65% 65%; /* Warm orange accent */
+    --accent-foreground: 25 25% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 45 29% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 25% 80%; /* Subtle warm borders */
+    --input: 35 25% 80%;
+    --ring: 15 75% 55%;
+    
+    /* Custom journal variables */
+    --journal-shadow: 25 25% 20% / 0.1;
+    --notebook-line: 35 25% 80%;
+    --vintage-stain: 35 45% 88%;
+    --ink-blue: 220 75% 45%;
+    --ink-green: 140 60% 40%;
 
     --radius: 0.5rem;
 
