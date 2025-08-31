@@ -7,6 +7,7 @@ import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import sampleApplePie from "@/assets/sample-apple-pie.jpg";
 import sampleIngredients from "@/assets/sample-ingredients.jpg";
+import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -119,9 +120,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Clean Header */}
-      <div className="border-b border-border">
-        <div className="max-w-5xl mx-auto px-6 py-16">
+      {/* Hero Header with Banner */}
+      <div className="relative border-b border-border overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${recipeBookBanner})` }}
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        
+        <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
             <h1 className="font-display text-6xl font-semibold text-foreground mb-6 tracking-tight">
               Mother's Good Taste
