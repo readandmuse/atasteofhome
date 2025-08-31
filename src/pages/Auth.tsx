@@ -11,7 +11,6 @@ import { toast } from "@/components/ui/use-toast";
 const Auth = () => {
   const navigate = useNavigate();
   const [session, setSession] = useState<Session | null>(null);
-  const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,22 +40,6 @@ const Auth = () => {
     }
   };
 
-  const handleSignUp = async () => {
-    setLoading(true);
-    const redirectUrl = `${window.location.origin}/`;
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { emailRedirectTo: redirectUrl },
-    });
-    setLoading(false);
-    if (error) {
-      toast({ title: "Sign up failed", description: error.message, variant: "destructive" });
-    } else {
-      toast({ title: "Check your email", description: "Confirm your email to complete signup" });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border">
@@ -69,10 +52,10 @@ const Auth = () => {
         <Card className="bg-card border-2 border-border shadow-sm">
           <CardHeader>
             <CardTitle className="font-serif text-2xl text-primary">
-              {isLogin ? "Sign in" : "Create an account"}
+              Sign in
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              {isLogin ? "Use your email and password to sign in." : "Sign up with email and password."}
+              Use your email and password to sign in.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -96,23 +79,23 @@ const Auth = () => {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={isLogin ? "current-password" : "new-password"}
+                  autoComplete="current-password"
                 />
               </div>
               <Button
                 className="w-full"
-                onClick={isLogin ? handleSignIn : handleSignUp}
+                onClick={handleSignIn}
                 disabled={loading}
               >
-                {loading ? "Please wait..." : isLogin ? "Sign in" : "Sign up"}
+                {loading ? "Please wait..." : "Sign in"}
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 className="w-full"
-                onClick={() => setIsLogin((v) => !v)}
+                onClick={() => navigate("/")}
               >
-                {isLogin ? "Need an account? Sign up" : "Have an account? Sign in"}
+                Back to Homepage
               </Button>
             </div>
           </CardContent>
