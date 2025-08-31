@@ -135,8 +135,8 @@ const Index = () => {
             <h1 className="font-display text-6xl font-semibold text-foreground mb-6 tracking-tight">
               Mother's Good Taste
             </h1>
-            <p className="font-sans text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too.
+            <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Also known as 妈妈的味道 in Mandarin. From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too.
             </p>
           </div>
 
