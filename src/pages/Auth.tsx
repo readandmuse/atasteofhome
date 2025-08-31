@@ -43,25 +43,26 @@ const Auth = () => {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <h1 className="text-2xl font-serif text-primary">Authentication</h1>
+        <div className="max-w-5xl mx-auto px-6 py-8">
+          <h1 className="text-3xl font-display font-semibold text-foreground">Authentication</h1>
         </div>
       </header>
 
-      <main className="max-w-md mx-auto px-4 py-12">
-        <Card className="bg-card border-2 border-border shadow-sm">
-          <CardHeader>
-            <CardTitle className="font-serif text-2xl text-primary">
-              Sign in
-            </CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Use your email and password to sign in.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
+      <main className="max-w-lg mx-auto px-6 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-display font-semibold text-foreground mb-4">
+            Sign in
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Use your email and password to sign in.
+          </p>
+        </div>
+
+        <Card className="bg-card border border-border shadow-sm">
+          <CardContent className="pt-8">
+            <div className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="text-sm font-medium text-foreground">Email</Label>
                 <Input
                   id="email"
                   type="email"
@@ -69,10 +70,11 @@ const Auth = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
+                  className="h-12 text-base"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password" className="text-sm font-medium text-foreground">Password</Label>
                 <Input
                   id="password"
                   type="password"
@@ -80,10 +82,11 @@ const Auth = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   autoComplete="current-password"
+                  className="h-12 text-base"
                 />
               </div>
               <Button
-                className="w-full"
+                className="w-full h-12 text-base bg-primary hover:bg-primary/90 text-primary-foreground"
                 onClick={handleSignIn}
                 disabled={loading}
               >
@@ -92,7 +95,7 @@ const Auth = () => {
               <Button
                 type="button"
                 variant="ghost"
-                className="w-full"
+                className="w-full h-12 text-base"
                 onClick={() => navigate("/")}
               >
                 Back to Homepage

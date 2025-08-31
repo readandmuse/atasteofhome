@@ -19,11 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'serif': ['Playfair Display', 'Noto Serif SC', 'serif'],
-				'sans': ['Noto Sans SC', 'system-ui', 'sans-serif'],
-				'elegant': ['Playfair Display', 'Noto Serif SC', 'serif'],
-				'script': ['Playfair Display', 'Noto Serif SC', 'serif'],
-				'playfair': ['Playfair Display', 'Noto Serif SC', 'serif'],
+				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+				'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

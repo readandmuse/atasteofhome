@@ -119,30 +119,30 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-secondary/40 via-card to-muted/40 border-b-2 border-border shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="text-center mb-8">
-            <h1 className="font-serif text-5xl text-primary mb-4">
-              Mother's Good Taste 妈妈的味道
+      {/* Clean Header */}
+      <div className="border-b border-border">
+        <div className="max-w-5xl mx-auto px-6 py-16">
+          <div className="text-center">
+            <h1 className="font-display text-6xl font-semibold text-foreground mb-6 tracking-tight">
+              Mother's Good Taste
             </h1>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              "🧑🏼‍🍳✍🏼 From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too."
+            <p className="font-sans text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too.
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-12">
             {canAdd ? (
               <Button
                 onClick={handleNewRecipe}
                 size="lg"
-                className="font-sans text-lg px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+                className="font-sans text-base px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <PlusCircle className="w-5 h-5 mr-2" />
+                <PlusCircle className="w-5 h-5 mr-3" />
                 Add New Recipe
               </Button>
             ) : (
-              <Button size="lg" variant="secondary" className="font-sans text-lg px-8 py-3" asChild>
+              <Button size="lg" variant="secondary" className="font-sans text-base px-8 py-4" asChild>
                 <Link to="/auth">Sign in to add recipes</Link>
               </Button>
             )}
@@ -151,50 +151,46 @@ const Index = () => {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto px-6 py-20">
         {recipes.length === 0 ? (
-          <div className="text-center py-16">
-            <Card className="max-w-md mx-auto bg-card border-2 border-border shadow-lg">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-secondary/30 rounded-full flex items-center justify-center mb-4">
-                  <BookOpen className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="font-serif text-3xl text-primary">
-                  Start Your Recipe Collection
-                </CardTitle>
-                <CardDescription className="font-sans text-lg text-muted-foreground">
-                  Begin documenting those special family recipes that make every meal memorable.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {canAdd ? (
-                  <Button
-                    onClick={handleNewRecipe}
-                    className="w-full font-sans text-base bg-primary hover:bg-primary/90 text-primary-foreground"
-                  >
-                    <PlusCircle className="w-4 h-4 mr-2" />
-                    Add Your First Recipe
-                  </Button>
-                ) : (
-                  <Button variant="secondary" className="w-full font-sans text-base" asChild>
-                    <Link to="/auth">Sign in to add recipes</Link>
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
+          <div className="text-center py-20">
+            <div className="max-w-lg mx-auto">
+              <div className="w-20 h-20 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-8">
+                <BookOpen className="w-10 h-10 text-muted-foreground" />
+              </div>
+              <h2 className="font-display text-4xl font-semibold text-foreground mb-4">
+                Start Your Recipe Collection
+              </h2>
+              <p className="font-sans text-lg text-muted-foreground mb-10 leading-relaxed">
+                Begin documenting those special family recipes that make every meal memorable.
+              </p>
+              {canAdd ? (
+                <Button
+                  onClick={handleNewRecipe}
+                  className="font-sans text-base px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  <PlusCircle className="w-5 h-5 mr-3" />
+                  Add Your First Recipe
+                </Button>
+              ) : (
+                <Button variant="secondary" className="font-sans text-base px-8 py-4" asChild>
+                  <Link to="/auth">Sign in to add recipes</Link>
+                </Button>
+              )}
+            </div>
           </div>
         ) : (
           <>
-            <div className="text-center mb-8">
-              <h2 className="font-serif text-4xl text-primary mb-2">
+            <div className="text-center mb-16">
+              <h2 className="font-display text-5xl font-semibold text-foreground mb-4">
                 Recipe Collection
               </h2>
-              <p className="font-sans text-lg text-muted-foreground">
+              <p className="font-sans text-xl text-muted-foreground">
                 {recipes.length} treasured recipe{recipes.length !== 1 ? 's' : ''} preserved
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recipes.map((recipe) => (
                 <RecipeCard
                   key={recipe.id}
@@ -206,16 +202,6 @@ const Index = () => {
             </div>
           </>
         )}
-      </div>
-
-      {/* Footer */}
-      <div className="bg-gradient-to-r from-secondary/20 to-muted/20 border-t border-border mt-16">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
-          <p className="font-elegant text-2xl text-primary mb-2">
-            "Cooking is love made visible"
-          </p>
-          <div className="w-32 h-0.5 bg-primary/30 mx-auto"></div>
-        </div>
       </div>
     </div>
   );

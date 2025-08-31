@@ -8,41 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Journal/Notebook color palette */
-    --background: 45 29% 97%; /* Cream/off-white paper */
-    --foreground: 25 25% 20%; /* Dark brown ink */
+    /* Clean Minimalist Design System */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 0 0% 9%; /* Deep black */
 
-    --card: 42 33% 95%; /* Slightly yellowed paper */
-    --card-foreground: 25 25% 20%;
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 0 0% 9%;
 
-    --popover: 42 33% 95%;
-    --popover-foreground: 25 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 15 75% 55%; /* Warm terracotta/rust */
-    --primary-foreground: 45 29% 97%;
+    --primary: 0 0% 9%; /* Black primary */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 35 45% 85%; /* Warm beige */
-    --secondary-foreground: 25 25% 20%;
+    --secondary: 0 0% 96%; /* Light gray */
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 35 45% 85%;
-    --muted-foreground: 25 15% 50%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 25 65% 65%; /* Warm orange accent */
-    --accent-foreground: 25 25% 20%;
+    --accent: 221 83% 53%; /* Clean blue accent */
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 45 29% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 35 25% 80%; /* Subtle warm borders */
-    --input: 35 25% 80%;
-    --ring: 15 75% 55%;
+    --border: 0 0% 90%; /* Very light gray borders */
+    --input: 0 0% 90%;
+    --ring: 221 83% 53%;
     
-    /* Custom journal variables */
-    --journal-shadow: 25 25% 20% / 0.1;
-    --notebook-line: 35 25% 80%;
-    --vintage-stain: 35 45% 88%;
-    --ink-blue: 220 75% 45%;
-    --ink-green: 140 60% 40%;
+    /* Clean design variables */
+    --clean-shadow: 0 0% 0% / 0.05;
+    --soft-gray: 0 0% 95%;
+    --medium-gray: 0 0% 60%;
+    --hover-gray: 0 0% 98%;
 
     --radius: 0.5rem;
 
