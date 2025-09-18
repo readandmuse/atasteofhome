@@ -133,7 +133,7 @@ const Index = () => {
         <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
             <h1 className="font-display text-6xl font-semibold text-foreground mb-6 tracking-tight">
-              Good Taste of Home
+              A Taste of Home
             </h1>
             <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Also known as 家的味道 in Mandarin. From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too.
