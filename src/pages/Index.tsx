@@ -14,6 +14,8 @@ import ladyFingersPhoto1 from "@/assets/lady-fingers-photo-1.jpg";
 import ladyFingersPhoto2 from "@/assets/lady-fingers-photo-2.jpg";
 import curryChickenPhoto1 from "@/assets/curry-chicken-photo-1.jpg";
 import curryChickenPhoto2 from "@/assets/curry-chicken-photo-2.jpg";
+import whiteRadishSoupPhoto1 from "@/assets/white-radish-soup-photo-1.jpg";
+import whiteRadishSoupPhoto2 from "@/assets/white-radish-soup-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -158,8 +160,44 @@ const curryChickenRecipe: Recipe = {
   notes: "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavors combine."
 };
 
+const whiteRadishSoupRecipe: Recipe = {
+  id: "sample-7",
+  title: "White Radish Soup 白萝卜汤",
+  description: "A healthy and nourishing soup with white radish, cuttlefish, pork, and carrots. Perfect comfort food for the whole family!",
+  ingredients: [
+    "Cuttlefish (dry) - 1 piece",
+    "Radish 白萝卜 (2 small ones)",
+    "Pork 三层肉/排骨 - 1 packet",
+    "Carrots (2 small ones)",
+    "Salt (1 tsp)"
+  ],
+  steps: [
+    "Boil water (about 3/4 of the big pot filled with water).",
+    "Wash and cut the cuttlefish into squares.",
+    "Pour it into the pot of boiling water.",
+    "Scrap the skin of the radish away. Carrots too.",
+    "Cut them into dice-like shapes.",
+    "Pour it into the pot of water with cuttlefish.",
+    "Cook it for around 2½ hours.",
+    "Put meat (排骨 and 三层肉) into the soup.",
+    "Boil for a few minutes.",
+    "Soup is ready to be served!",
+    "Wash the pork and put them on a metal plate.",
+    "After the pot of water is boiled, pour some boiling water from the pot across the plate of pork. Using a ladle.",
+    "Put the pork inside the pot.",
+    "Adjust to mid-fire. Boil for around 20 minutes.",
+    "Add 1 tsp of salt into the pot.",
+    "After boiling at mid-fire, adjust to small fire.",
+    "Boil for about 2 hours at small fire. Soup is ready!"
+  ],
+  cookingTime: "2.5-3 hours",
+  servings: "5-6 servings",
+  photos: [whiteRadishSoupPhoto1, whiteRadishSoupPhoto2],
+  notes: "A healthy soup! 😊 To cut away the fats if the pork contains too much of fats."
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe, whiteRadishSoupRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
