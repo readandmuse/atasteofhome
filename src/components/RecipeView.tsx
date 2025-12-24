@@ -211,8 +211,8 @@ export const RecipeView = ({ recipe, onEdit, onBack, canEdit = false }: RecipeVi
 
         {/* Journal-style footer */}
         <div className="mt-8 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">
-            "Made with love, preserved with care"
+          <p className="font-elegant text-lg text-muted-foreground italic">
+            Made with love, preserved with care.
           </p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-2"></div>
         </div>
