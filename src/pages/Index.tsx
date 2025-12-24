@@ -389,7 +389,19 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
           <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care"</p>
-          <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-2"></div>
+          <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
+          <p className="font-sans text-sm text-muted-foreground mt-4">
+            Created by{" "}
+            <a
+              href="https://jotance.my.canva.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground transition-colors"
+            >
+              Joanne Tan
+            </a>
+            .
+          </p>
         </div>
       </div>
     </div>
