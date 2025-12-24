@@ -6,6 +6,7 @@ import { RecipeForm, Recipe } from "@/components/RecipeForm";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
+import motherDaughterCover from "@/assets/mother-daughter-cover.png";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
@@ -308,7 +309,7 @@ const Index = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${recipeBookBanner})` }}
+          style={{ backgroundImage: `url(${motherDaughterCover})` }}
         />
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
@@ -394,6 +395,21 @@ const Index = () => {
             </div>
           </>
         )}
+      </div>
+
+      {/* Footer with original banner */}
+      <div className="relative border-t border-border overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${recipeBookBanner})` }}
+        />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
+          <p className="font-elegant text-lg text-muted-foreground">
+            "Made with love, preserved with care"
+          </p>
+          <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-2"></div>
+        </div>
       </div>
     </div>
   );
