@@ -366,7 +366,7 @@ const Index = () => {
         ) : (
           <>
             <div className="text-center mb-16">
-              <h2 className="font-display text-5xl font-semibold text-foreground mb-4">Recipe Collection</h2>
+              <h2 className="font-pacifico text-5xl text-foreground mb-4">Recipe Collection</h2>
               <p className="font-sans text-xl text-muted-foreground">
                 {recipes.length} treasured recipe{recipes.length !== 1 ? "s" : ""} preserved
               </p>
