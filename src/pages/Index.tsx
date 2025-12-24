@@ -88,8 +88,7 @@ const abcSoupRecipe: Recipe = {
 const eggLongBeansRecipe: Recipe = {
   id: "sample-4",
   title: "Egg and Long Beans 蛋炒四季豆",
-  description:
-    "A simple and delicious stir-fry dish where eggs and long beans come together beautifully. Mummy really good at cooking eggs! 😊",
+  description: "A simple and delicious stir-fry dish where eggs and long beans come together beautifully.",
   ingredients: ["Eggs (4 to 5)", "Long beans 四季豆", "Salt", "Onion (bigger but diced)", "Light soy sauce"],
   steps: [
     "Add oil into the wok and put the diced (big) onions into the wok first. Fry it fast to prevent it from being burnt.",
@@ -315,8 +314,10 @@ const Index = () => {
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
             <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
-              Also known as 家的味道 in Mandarin Chinese.<br />
-              From a daughter who had handwritten her mother's homemade recipes in 2011<br />
+              Also known as 家的味道 in Mandarin Chinese.
+              <br />
+              From a daughter who had handwritten her mother's homemade recipes in 2011
+              <br />
               and is now digitising them. May include new ones too.
             </p>
           </div>
@@ -378,7 +379,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recipes.map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} canEdit={canAdd} />
+                <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
               ))}
             </div>
           </>
