@@ -45,8 +45,36 @@ const sampleRecipe: Recipe = {
   notes: "奶奶总是说，做苹果派最重要的是用心和耐心。The key to a perfect apple pie is patience and love. Don't rush the cooling process - it helps the filling set properly. This recipe works beautifully for both English and Chinese family gatherings!"
 };
 
+const stewedRiceRecipe: Recipe = {
+  id: "sample-2",
+  title: "Stewed Rice 煲仔饭 (Vegetable 芥菜/Potato/Sausage/Yam/Pumpkin)",
+  description: "A hearty one-pot rice dish where all ingredients are fried in a pan first, then stewed together in a rice cooker. The mushroom and shrimp gravy gives the rice an incredible depth of flavour.",
+  ingredients: [
+    "Rice",
+    "Onion",
+    "Mushroom (冬菇 brown/black)",
+    "Pork 烧肉",
+    "Main vegetable (芥菜, potato, sausage, yam, or pumpkin)",
+    "Shrimp 虾米",
+    "Salt",
+    "Dark soy sauce"
+  ],
+  steps: [
+    "Soak the mushrooms (冬菇) for a few hours before cooking. Keep the mushroom water as it will form part of the gravy for the rice.",
+    "Wash the rice first, then soak it for about 20-30 minutes before cooking.",
+    "Fry the onion, mushroom, pork (烧肉), and shrimp (虾米) together in a pan. Add salt and dark soy sauce while frying.",
+    "Add the main ingredient of your choice - vegetable (芥菜), pumpkin, yam, potato, or sausage.",
+    "Pour in the shrimp gravy and mushroom gravy, just enough to fill up the rice. Don't pour all of it - too much water will turn the rice into congee!",
+    "Transfer everything to the rice cooker. Leave it to stew and you're done!"
+  ],
+  cookingTime: "1 hour (plus mushroom soaking time)",
+  servings: "4-6 servings",
+  photos: [],
+  notes: "Tool: Rice cooker. The key is to fry all the ingredients in the pan before putting everything in the rice cooker to stew. Don't throw away the mushroom soaking water - it's essential for the gravy!"
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
