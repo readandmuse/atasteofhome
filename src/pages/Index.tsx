@@ -408,6 +408,9 @@ const Index = () => {
             </a>
             .
           </p>
+          <p className="font-sans text-xs text-muted-foreground mt-2">
+            Last updated: 24 December 2025
+          </p>
         </div>
       </div>
     </div>
