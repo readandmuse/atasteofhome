@@ -316,9 +316,9 @@ const Index = () => {
             <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
               Also known as 家的味道 in Mandarin Chinese.
               <br />
-              From a daughter who had handwritten her mother's homemade recipes
+              From a daughter who had handwritten her mother's homemade recipes in 2011
               <br />
-              back in 2011 and is now digitising them. May include new ones too.
+              and is now digitising them. New ones upcoming!
             </p>
           </div>
 
