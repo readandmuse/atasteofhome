@@ -104,8 +104,10 @@ export const RecipeView = ({ recipe, onEdit, onBack, canEdit = false }: RecipeVi
                       <img
                         src={photo}
                         alt={`${recipe.title} - Photo ${index + 1}`}
-                        className="w-full h-48 object-cover shadow-sm group-hover:shadow-md group-hover:border-primary/50 transition-all"
+                        className="w-full h-48 object-cover shadow-sm group-hover:shadow-md group-hover:border-primary/50 transition-all select-none pointer-events-none"
                         style={{ transform: `rotate(${rotation}deg)` }}
+                        draggable={false}
+                        onContextMenu={(e) => e.preventDefault()}
                       />
                       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center">
                         <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity bg-primary/80 px-3 py-1 rounded-full text-sm font-sans">
@@ -136,7 +138,9 @@ export const RecipeView = ({ recipe, onEdit, onBack, canEdit = false }: RecipeVi
                 <img
                   src={selectedPhoto}
                   alt="Recipe photo enlarged"
-                  className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  className="w-full h-auto max-h-[85vh] object-contain rounded-lg select-none pointer-events-none"
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
                   style={{ transform: `rotate(${selectedPhotoRotation}deg)` }}
                 />
               )}
