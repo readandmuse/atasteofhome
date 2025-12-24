@@ -312,8 +312,8 @@ const Index = () => {
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
             <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed italic">
-              Also known as 家的味道 in Mandarin Chinese. From a daughter who had handwritten her mother's homemade
-              recipes in 2011 and now digitising them. May include new ones too.
+              Also known as 家的味道 in Mandarin Chinese. From a daughter who handwrote her mother's homemade
+              recipes in 2011 and is now digitising them. May include new ones too.
             </p>
           </div>
 
@@ -368,7 +368,7 @@ const Index = () => {
             <div className="text-center mb-16">
               <h2 className="font-baskerville text-5xl font-bold text-foreground mb-4">Recipe Collection</h2>
               <p className="font-sans text-xl text-muted-foreground">
-                {recipes.length} treasured recipe{recipes.length !== 1 ? "s" : ""} preserved
+                {recipes.length} cherished recipe{recipes.length !== 1 ? "s" : ""} preserved
               </p>
             </div>
 
