@@ -291,7 +291,7 @@ const Index = () => {
   }
 
   if (currentView === "view" && viewingRecipe) {
-    return <RecipeView recipe={viewingRecipe} onEdit={handleEditRecipe} onBack={handleBack} />;
+    return <RecipeView recipe={viewingRecipe} onEdit={handleEditRecipe} onBack={handleBack} canEdit={canAdd} />;
   }
 
   return (
