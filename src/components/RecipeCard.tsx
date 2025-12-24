@@ -8,9 +8,10 @@ interface RecipeCardProps {
   recipe: Recipe;
   onEdit: (recipe: Recipe) => void;
   onView: (recipe: Recipe) => void;
+  canEdit?: boolean;
 }
 
-export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
+export const RecipeCard = ({ recipe, onEdit, onView, canEdit = false }: RecipeCardProps) => {
   const mainPhoto = recipe.photos?.[0];
   const mainPhotoRotation = recipe.photoRotations?.[0] || 0;
 
@@ -88,14 +89,16 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
             <Eye className="w-4 h-4 mr-2" />
             View Recipe
           </Button>
-          <Button
-            onClick={() => onEdit(recipe)}
-            variant="outline"
-            size="sm"
-            className="font-sans border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
-          >
-            <Edit2 className="w-4 h-4" />
-          </Button>
+          {canEdit && (
+            <Button
+              onClick={() => onEdit(recipe)}
+              variant="outline"
+              size="sm"
+              className="font-sans border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
+            >
+              <Edit2 className="w-4 h-4" />
+            </Button>
+          )}
         </div>
       </CardFooter>
     </Card>
