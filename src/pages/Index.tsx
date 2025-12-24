@@ -5,8 +5,6 @@ import { PlusCircle, BookOpen } from "lucide-react";
 import { RecipeForm, Recipe } from "@/components/RecipeForm";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
-import sampleApplePie from "@/assets/sample-apple-pie.jpg";
-import sampleIngredients from "@/assets/sample-ingredients.jpg";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
@@ -19,39 +17,6 @@ import curryChickenPhoto2 from "@/assets/curry-chicken-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
-
-// Sample recipe data
-const sampleRecipe: Recipe = {
-  id: "sample-1",
-  title: "奶奶的苹果派 (Grandma's Apple Pie)",
-  description: "This is my grandmother's secret apple pie recipe, passed down through three generations. The secret is in the perfect balance of sweet and tart apples with just a hint of cinnamon.",
-  ingredients: [
-    "6-8 medium apples (mixed Granny Smith and Honeycrisp)",
-    "2 cups all-purpose flour",
-    "1 cup cold unsalted butter, cubed",
-    "1/2 cup granulated sugar",
-    "1/4 cup brown sugar",
-    "2 tsp ground cinnamon",
-    "1/4 tsp ground nutmeg",
-    "1/4 tsp salt",
-    "2 tbsp cornstarch",
-    "1 egg for egg wash",
-    "2 tbsp cold water"
-  ],
-  steps: [
-    "Preheat your oven to 425°F (220°C). In a large bowl, mix flour and salt. Cut in cold butter until mixture resembles coarse crumbs.",
-    "Gradually add cold water, mixing until dough forms. Divide in half, wrap in plastic, and refrigerate for at least 1 hour.",
-    "Peel and slice apples into thin wedges. In a large bowl, toss apples with both sugars, cinnamon, nutmeg, and cornstarch.",
-    "Roll out one dough portion on floured surface. Place in 9-inch pie pan. Fill with apple mixture.",
-    "Roll out remaining dough for top crust. Place over filling and seal edges. Cut several slits for steam vents.",
-    "Brush top with beaten egg. Bake for 45-50 minutes until crust is golden brown and filling is bubbly.",
-    "Cool on wire rack for at least 2 hours before serving. Serve with vanilla ice cream if desired."
-  ],
-  cookingTime: "1 hour 30 minutes",
-  servings: "8 slices",
-  photos: [sampleApplePie, sampleIngredients],
-  notes: "奶奶总是说，做苹果派最重要的是用心和耐心。The key to a perfect apple pie is patience and love. Don't rush the cooling process - it helps the filling set properly. This recipe works beautifully for both English and Chinese family gatherings!"
-};
 
 const stewedRiceRecipe: Recipe = {
   id: "sample-2",
@@ -194,7 +159,7 @@ const curryChickenRecipe: Recipe = {
 };
 
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
