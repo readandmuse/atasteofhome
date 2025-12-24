@@ -212,9 +212,9 @@ const soyBeanPorkCapsicumRecipe: Recipe = {
     "Fry till the colours are bright.",
     "Dish out the capsicum and put on a plate.",
     "Prepare the 豆酱 (soy bean paste) 排骨 with water, there must be more water than the bean paste. Mix them all in a bowl.",
-    "Fry the 排骨, all of them with garlic and the diced chilli. 炒 它 all.",
+    "Fry the 排骨, all of them with garlic and the diced chilli. 炒香 all.",
     "Pour the bean paste (mixed) into the wok. Let it 炒 for 5 min. Then pour the plate of capsicum all into the wok and it 炒 for 5 min again.",
-    "After that, transfer the whole dish into the pot which is used for 炖 stuffs (like previous page) and 炒 it for about 10-15 min on mid-fire.",
+    "After that, transfer the whole dish into the pot which is used for 炖 stuffs (like previous page) and 焖 it for about 10-15 min on mid-fire.",
     "Dish is ready to be served!",
   ],
   cookingTime: "30-40 minutes",
@@ -316,9 +316,9 @@ const Index = () => {
             <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
               Also known as 家的味道 in Mandarin Chinese.
               <br />
-              From a daughter who had handwritten her mother's homemade recipes
+              From a daughter who had handwritten her mother's homemade recipes in 2011
               <br />
-              back in 2011 and is now digitising them. New ones upcoming!
+              and is now digitising them. May include new ones too.
             </p>
           </div>
 
@@ -394,7 +394,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">Made with love, preserved with care.</p>
+          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care."</p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
           <p className="font-sans text-sm text-muted-foreground mt-4">
             Created by{" "}
