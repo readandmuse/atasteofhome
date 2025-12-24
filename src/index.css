@@ -42,6 +42,10 @@ All colors MUST be HSL.
     --soft-gray: 0 0% 95%;
     --medium-gray: 0 0% 60%;
     --hover-gray: 0 0% 98%;
+    
+    /* Recipe colors - PANTONE 12-0640 Corn Confection */
+    --instructions: 52 100% 79%;
+    --instructions-foreground: 0 0% 9%;
 
     --radius: 0.5rem;
 
