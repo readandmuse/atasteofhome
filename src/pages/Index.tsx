@@ -378,7 +378,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recipes.map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
+                <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} canEdit={canAdd} />
               ))}
             </div>
           </>
