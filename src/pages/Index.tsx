@@ -6,7 +6,7 @@ import { RecipeForm, Recipe } from "@/components/RecipeForm";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
-import motherDaughterCover from "@/assets/mother-daughter-cover.png";
+import heroCover from "@/assets/hero-cover.jpg";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
@@ -299,14 +299,17 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Header with Banner */}
       <div className="relative border-b border-border overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with blur */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${motherDaughterCover})` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+          style={{ 
+            backgroundImage: `url(${heroCover})`,
+            filter: 'blur(3px)'
+          }}
         />
         {/* Warm color overlay to match footer */}
         <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-orange-800/30 to-amber-700/40" />
-        <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/50" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
