@@ -6,7 +6,7 @@ import { RecipeForm, Recipe } from "@/components/RecipeForm";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
-import motherDaughterCover from "@/assets/mother-daughter-cover.png";
+import heroCover from "@/assets/hero-cover.jpg";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
@@ -299,16 +299,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Header with Banner */}
       <div className="relative border-b border-border overflow-hidden">
-        {/* Background Image with natural sunlight filter */}
+        {/* Background Image with blur for cover effect */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{ 
-            backgroundImage: `url(${motherDaughterCover})`,
-            filter: 'saturate(1.1) brightness(1.05) sepia(0.1)'
+            backgroundImage: `url(${heroCover})`,
+            filter: 'blur(4px) brightness(1.05)'
           }}
         />
-        {/* Natural sunlight overlay - cooler tones with subtle warmth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-100/20 via-amber-50/15 to-yellow-100/20" />
+        {/* Soft overlay for text readability */}
+        <div className="absolute inset-0 bg-background/50" />
         <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
