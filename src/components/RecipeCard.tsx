@@ -17,7 +17,10 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 bg-card border-2 border-border hover:border-primary/30 hover:-translate-y-1">
       {mainPhoto && (
-        <div className="relative overflow-hidden rounded-t-lg">
+        <div 
+          className="relative overflow-hidden rounded-t-lg cursor-pointer"
+          onClick={() => onView(recipe)}
+        >
           <img
             src={mainPhoto}
             alt={recipe.title}
