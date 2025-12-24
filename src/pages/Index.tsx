@@ -12,6 +12,8 @@ import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
 import eggLongBeansPhoto2 from "@/assets/egg-long-beans-photo-2.jpg";
+import ladyFingersPhoto1 from "@/assets/lady-fingers-photo-1.jpg";
+import ladyFingersPhoto2 from "@/assets/lady-fingers-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -134,8 +136,35 @@ const eggLongBeansRecipe: Recipe = {
   notes: "The key is to fry the onions quickly to avoid burning, and make sure the eggs cover the beans completely before flipping!"
 };
 
+const ladyFingersRecipe: Recipe = {
+  id: "sample-5",
+  title: "Stir-Fry Lady Fingers/Okra 炒秋葵",
+  description: "Easy to cook! A simple stir-fry dish with lady fingers (okra) in a savory oyster sauce. Quick and delicious!",
+  ingredients: [
+    "Lady Fingers (Okra)",
+    "Onions (diced)",
+    "Garlic (diced)",
+    "Oyster sauce (4 metal spoons)",
+    "Salt (½ tsp)"
+  ],
+  steps: [
+    "Dice onions and garlic.",
+    "Put onions and garlic in the wok with oil and fry them.",
+    "Put ½ tsp of salt.",
+    "Stir-fry them till a nice smell is detected.",
+    "Pour 4 metal spoons of oyster sauce.",
+    "Pour in all the Lady's Fingers. Cut off the end first, then cut it slantedly into thin pieces.",
+    "Fry them altogether till it's cooked.",
+    "Dish is ready to be served!"
+  ],
+  cookingTime: "15 minutes",
+  servings: "3-4 servings",
+  photos: [ladyFingersPhoto1, ladyFingersPhoto2],
+  notes: "CAUTION! DON'T ADD WATER! It will make the dish even more gluey!"
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
