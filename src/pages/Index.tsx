@@ -59,11 +59,11 @@ const abcSoupRecipe: Recipe = {
   description:
     "A nutritious and delicious soup loaded with vitamins! The name 'ABC' comes from the simple combination of essential vegetables. Perfect for the whole family with about 5-6 servings.",
   ingredients: [
-    "Pork (排骨 fresh)",
+    "Pork (排骨)",
     "Apples (optional)",
-    "Potatoes (2 packets; each has around 6)",
-    "Tomatoes (2 big ones) - you can add one more for a more sour and refreshed taste",
-    "Onions (big portions: 2 big ones, small portions: 1 big one)",
+    "Potatoes (2 packets; each has ~6)",
+    "Tomatoes (2 big ones) - You can add more for a more sour and refreshed taste",
+    "Onions (Big portions: 2 big ones, small portions: 1 big one)",
     "Carrots (2)",
     "Salt (1 tsp)",
   ],
@@ -82,7 +82,7 @@ const abcSoupRecipe: Recipe = {
   servings: "5-6 servings",
   photos: [abcSoupPhoto1, abcSoupPhoto2],
   photoRotations: [180, 0], // First photo needs 180 degree rotation
-  notes: "The water really carries only main braising soup! Loads of nutrients and vitamins 😊",
+  notes: "Use leftover apples that adds extra sweetness to the soup!",
 };
 
 const eggLongBeansRecipe: Recipe = {
@@ -113,7 +113,7 @@ const ladyFingersRecipe: Recipe = {
   description:
     "Easy to cook! A simple stir-fry dish with lady fingers (okra) in a savory oyster sauce. Quick and delicious!",
   ingredients: [
-    "Lady Fingers (Okra)",
+    "Lady Fingers/Okra",
     "Onions (diced)",
     "Garlic (diced)",
     "Oyster sauce (4 metal spoons)",
@@ -154,7 +154,7 @@ const curryChickenRecipe: Recipe = {
   servings: "4-5 servings",
   photos: [curryChickenPhoto1, curryChickenPhoto2],
   notes:
-    "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavors combine.",
+    "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavours combine.",
 };
 
 const whiteRadishSoupRecipe: Recipe = {
@@ -389,7 +389,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care"</p>
+          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care."</p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
           <p className="font-sans text-sm text-muted-foreground mt-4">
             Created by{" "}
