@@ -6,7 +6,7 @@ import { RecipeForm, Recipe } from "@/components/RecipeForm";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeView } from "@/components/RecipeView";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
-import heroCover from "@/assets/hero-cover.jpg";
+import motherDaughterCover from "@/assets/mother-daughter-cover.png";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
@@ -59,11 +59,11 @@ const abcSoupRecipe: Recipe = {
   description:
     "A nutritious and delicious soup loaded with vitamins! The name 'ABC' comes from the simple combination of essential vegetables. Perfect for the whole family with about 5-6 servings.",
   ingredients: [
-    "Pork (排骨)",
+    "Pork (排骨 fresh)",
     "Apples (optional)",
-    "Potatoes (2 packets; each has ~6)",
-    "Tomatoes (2 big ones) - You can add more for a more sour and refreshed taste",
-    "Onions (Big portions: 2 big ones, small portions: 1 big one)",
+    "Potatoes (2 packets; each has around 6)",
+    "Tomatoes (2 big ones) - you can add one more for a more sour and refreshed taste",
+    "Onions (big portions: 2 big ones, small portions: 1 big one)",
     "Carrots (2)",
     "Salt (1 tsp)",
   ],
@@ -82,7 +82,7 @@ const abcSoupRecipe: Recipe = {
   servings: "5-6 servings",
   photos: [abcSoupPhoto1, abcSoupPhoto2],
   photoRotations: [180, 0], // First photo needs 180 degree rotation
-  notes: "Use leftover apples that adds extra sweetness to the soup!",
+  notes: "Add leftover apples to give that extra sweetness to the soup!",
 };
 
 const eggLongBeansRecipe: Recipe = {
@@ -111,9 +111,9 @@ const ladyFingersRecipe: Recipe = {
   id: "sample-5",
   title: "Stir-Fry Lady Fingers/Okra 炒秋葵",
   description:
-    "Easy to cook! A simple stir-fry dish with lady fingers (okra) in a savory oyster sauce. Quick and delicious!",
+    "Easy to cook! A simple stir-fry dish with lady fingers (okra) in a savoury oyster sauce. Quick and delicious.",
   ingredients: [
-    "Lady Fingers/Okra",
+    "Lady Fingers (Okra)",
     "Onions (diced)",
     "Garlic (diced)",
     "Oyster sauce (4 metal spoons)",
@@ -154,7 +154,7 @@ const curryChickenRecipe: Recipe = {
   servings: "4-5 servings",
   photos: [curryChickenPhoto1, curryChickenPhoto2],
   notes:
-    "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavours combine.",
+    "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavors combine.",
 };
 
 const whiteRadishSoupRecipe: Recipe = {
@@ -191,7 +191,7 @@ const whiteRadishSoupRecipe: Recipe = {
   cookingTime: "2.5-3 hours",
   servings: "5-6 servings",
   photos: [whiteRadishSoupPhoto1, whiteRadishSoupPhoto2],
-  notes: "A healthy soup! 😊 To cut away the fats if the pork contains too much of fats.",
+  notes: "A healthy soup! 😊 Cut away the fats if the pork contains too much of fats.",
 };
 
 const soyBeanPorkCapsicumRecipe: Recipe = {
@@ -299,16 +299,13 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Header with Banner */}
       <div className="relative border-b border-border overflow-hidden">
-        {/* Background Image with blur for cover effect */}
+        {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-          style={{ 
-            backgroundImage: `url(${heroCover})`,
-            filter: 'blur(4px) brightness(1.05)'
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${motherDaughterCover})` }}
         />
-        {/* Soft overlay for text readability */}
-        <div className="absolute inset-0 bg-background/50" />
+        {/* Warm color overlay to match footer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-orange-800/30 to-amber-700/40" />
         <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
@@ -392,7 +389,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care."</p>
+          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care"</p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
           <p className="font-sans text-sm text-muted-foreground mt-4">
             Created by{" "}
