@@ -197,7 +197,7 @@ const soyBeanPorkCapsicumRecipe: Recipe = {
   id: "sample-8",
   title: "Soy Bean Paste Pork Rib with Capsicum 豆酱排骨炒彩椒",
   description:
-    "The soy bean paste makes it really yummy! A delicious stir-fry dish with tender pork ribs and colorful capsicum in savory soy bean paste sauce.",
+    "The soy bean paste makes it really yummy! A delicious stir-fry dish with tender pork ribs and colourful capsicum in savoury soy bean paste sauce.",
   ingredients: [
     "Garlic (3-4 pieces, diced)",
     "Oil (4 table metal spoons)",
@@ -291,7 +291,7 @@ const Index = () => {
   }
 
   if (currentView === "view" && viewingRecipe) {
-    return <RecipeView recipe={viewingRecipe} onEdit={handleEditRecipe} onBack={handleBack} canEdit={canAdd} />;
+    return <RecipeView recipe={viewingRecipe} onEdit={handleEditRecipe} onBack={handleBack} />;
   }
 
   return (
