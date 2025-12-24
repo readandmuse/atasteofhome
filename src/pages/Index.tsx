@@ -8,6 +8,8 @@ import { RecipeView } from "@/components/RecipeView";
 import sampleApplePie from "@/assets/sample-apple-pie.jpg";
 import sampleIngredients from "@/assets/sample-ingredients.jpg";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
+import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
+import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -73,8 +75,38 @@ const stewedRiceRecipe: Recipe = {
   notes: "Use a rice cooker. The key then is to fry all the ingredients in the pan before putting everything in the rice cooker to stew. Also, do not throw away the water that was for soaking the mushrooms - it's essential for the gravy!"
 };
 
+const abcSoupRecipe: Recipe = {
+  id: "sample-3",
+  title: "ABC Soup",
+  description: "A nutritious and delicious soup loaded with vitamins! The name 'ABC' comes from the simple combination of essential vegetables. Perfect for the whole family with about 5-6 servings.",
+  ingredients: [
+    "Pork (排骨 fresh)",
+    "Apples (optional)",
+    "Potatoes (2 packets; each has around 6)",
+    "Tomatoes (2 big ones) - you can add one more for a more sour and refreshed taste",
+    "Onions (big portions: 2 big ones, small portions: 1 big one)",
+    "Carrots (2)",
+    "Salt (1 tsp)"
+  ],
+  steps: [
+    "Pour water into a big pot, around 3/4 of the pot filled up.",
+    "Boil water in the pot. Bubbles are seen - hot water!",
+    "(Optional) Scrap off the skin of apples that are left quite long and not eaten, and cut them into dice-like shapes.",
+    "Add onions. Scrap off the skin, wash, then cut. Cut the big onion into half first before cutting it smaller.",
+    "Then add tomatoes. Cut into half first, then into smaller shapes. Place slanted when cutting.",
+    "Carrots added. Cut the carrots into thick strips first.",
+    "Lastly, add potatoes (dice-like shapes). Then add 排骨 after washing.",
+    "Add around 1 teaspoon of salt.",
+    "Boil for around 1.5 hours over small/mid fire."
+  ],
+  cookingTime: "1.5 hours",
+  servings: "5-6 servings",
+  photos: [abcSoupPhoto1, abcSoupPhoto2],
+  notes: "The water really carries only main braising soup! Loads of nutrients and vitamins 😊"
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
