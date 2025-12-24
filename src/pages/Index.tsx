@@ -314,11 +314,11 @@ const Index = () => {
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
             <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
-              Also known as 家的味道 in Mandarin Chinese.
+              ✏️🧑🏼‍🍳 Also known as 家的味道 in Mandarin Chinese.
               <br />
               From a daughter who had handwritten her mother's homemade recipes in 2011
               <br />
-              and is now digitising them. Adding new ones too!
+              and is now digitising them. May include new ones too.
             </p>
           </div>
 
@@ -407,9 +407,6 @@ const Index = () => {
               Joanne Tan
             </a>
             .
-          </p>
-          <p className="font-sans text-xs text-muted-foreground mt-2">
-            Last updated: 24 December 2025
           </p>
         </div>
       </div>
