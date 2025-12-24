@@ -197,7 +197,7 @@ const soyBeanPorkCapsicumRecipe: Recipe = {
   id: "sample-8",
   title: "Soy Bean Paste Pork Rib with Capsicum 豆酱排骨炒彩椒",
   description:
-    "The soy bean paste makes it really yummy! A delicious stir-fry dish with tender pork ribs and colorful capsicum in savory soy bean paste sauce.",
+    "The soy bean paste makes it really yummy! A delicious stir-fry dish with tender pork ribs and colourful capsicum in savoury soy bean paste sauce.",
   ingredients: [
     "Garlic (3-4 pieces, diced)",
     "Oil (4 table metal spoons)",
@@ -318,7 +318,7 @@ const Index = () => {
               <br />
               From a daughter who had handwritten her mother's homemade recipes
               <br />
-              back in 2011 and is now digitising them. New ones upcoming too!
+              back in 2011 and is now digitising them. New ones upcoming!
             </p>
           </div>
 
@@ -394,7 +394,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care."</p>
+          <p className="font-elegant text-lg text-muted-foreground">Made with love, preserved with care.</p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
           <p className="font-sans text-sm text-muted-foreground mt-4">
             Created by{" "}
