@@ -18,10 +18,11 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
+		fontFamily: {
 				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
 				'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'signature': ['Satisfy', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
