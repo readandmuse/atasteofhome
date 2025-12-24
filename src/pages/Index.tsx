@@ -159,7 +159,7 @@ const curryChickenRecipe: Recipe = {
 };
 
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
