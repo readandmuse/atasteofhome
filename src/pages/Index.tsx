@@ -314,12 +314,12 @@ const Index = () => {
         <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
-            <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
-              <br>Also known as 家的味道 in Mandarin Chinese.</br>
-              <br>
-                From a daughter who had handwritten her mother's homemade recipes in 2011 and is now digitising them.
-                May include new ones too.
-              </br>
+            <p className="font-sans text-lg text-amber-950 max-w-3xl mx-auto leading-relaxed italic">
+              Also known as 家的味道 in Mandarin Chinese.
+              <br />
+              <br />
+              From a daughter who had handwritten her mother's homemade recipes in 2011 and is now digitising them.
+              May include new ones too.
             </p>
           </div>
 
