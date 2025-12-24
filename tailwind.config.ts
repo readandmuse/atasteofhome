@@ -23,6 +23,7 @@ export default {
 				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
 				'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 				'signature': ['Satisfy', 'cursive'],
+				'pacifico': ['Pacifico', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
