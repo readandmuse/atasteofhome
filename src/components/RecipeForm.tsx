@@ -284,7 +284,9 @@ export const RecipeForm = ({ recipe, onSave, onCancel }: RecipeFormProps) => {
                         <img
                           src={photo}
                           alt={`Recipe photo ${index + 1}`}
-                          className="w-full h-32 object-cover rounded-lg border-2 border-border shadow-sm"
+                          className="w-full h-32 object-cover rounded-lg border-2 border-border shadow-sm select-none pointer-events-none"
+                          draggable={false}
+                          onContextMenu={(e) => e.preventDefault()}
                         />
                         <Button
                           type="button"
