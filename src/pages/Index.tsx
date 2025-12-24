@@ -312,7 +312,7 @@ const Index = () => {
             <h1 className="font-display text-6xl font-semibold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
             <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed italic">
               Also known as 家的味道 in Mandarin Chinese. From a daughter who had handwritten her mother's homemade
-              recipes by hand in 2011 and now digitalising them. May include new ones too.
+              recipes in 2011 and now digitalising them. May include new ones too.
             </p>
           </div>
 
@@ -389,19 +389,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
           <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care"</p>
-          <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
-          <p className="font-sans text-sm text-muted-foreground mt-4">
-            Created by{" "}
-            <a
-              href="https://jotance.my.canva.site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-foreground transition-colors"
-            >
-              Joanne Tan
-            </a>
-            .
-          </p>
+          <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-2"></div>
         </div>
       </div>
     </div>
