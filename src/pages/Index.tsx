@@ -16,6 +16,8 @@ import curryChickenPhoto1 from "@/assets/curry-chicken-photo-1.jpg";
 import curryChickenPhoto2 from "@/assets/curry-chicken-photo-2.jpg";
 import whiteRadishSoupPhoto1 from "@/assets/white-radish-soup-photo-1.jpg";
 import whiteRadishSoupPhoto2 from "@/assets/white-radish-soup-photo-2.jpg";
+import soyBeanPorkCapsicumPhoto1 from "@/assets/soy-bean-pork-capsicum-photo-1.jpg";
+import soyBeanPorkCapsicumPhoto2 from "@/assets/soy-bean-pork-capsicum-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -196,8 +198,38 @@ const whiteRadishSoupRecipe: Recipe = {
   notes: "A healthy soup! 😊 To cut away the fats if the pork contains too much of fats."
 };
 
+const soyBeanPorkCapsicumRecipe: Recipe = {
+  id: "sample-8",
+  title: "Soy Bean Paste Pork Rib with Capsicum 豆酱排骨炒彩椒",
+  description: "The soy bean paste makes it really yummy! A delicious stir-fry dish with tender pork ribs and colorful capsicum in savory soy bean paste sauce.",
+  ingredients: [
+    "Garlic (3-4 pieces, diced)",
+    "Oil (4 table metal spoons)",
+    "豆酱 Soy bean paste (4 metal tablespoons)",
+    "排骨 Spare ribs (about 1kg)",
+    "灯笼椒/柿子椒 Capsicum red/green (2)",
+    "Chilli padi (1-2条/粒)"
+  ],
+  steps: [
+    "Cut the red/green/yellow capsicum into smaller pieces, like how you cut carrots in the ABC soup.",
+    "炒 all the capsicum with garlic and oil.",
+    "Fry till the colours are bright.",
+    "Dish out the capsicum and put on a plate.",
+    "Prepare the 豆酱 (soy bean paste) 排骨 with water, there must be more water than the bean paste. Mix them all in a bowl.",
+    "Fry the 排骨, all of them with garlic and the diced chilli. 炒 它 all.",
+    "Pour the bean paste (mixed) into the wok. Let it 炒 for 5 min. Then pour the plate of capsicum all into the wok and it 炒 for 5 min again.",
+    "After that, transfer the whole dish into the pot which is used for 炖 stuffs (like previous page) and 炒 it for about 10-15 min on mid-fire.",
+    "Dish is ready to be served!"
+  ],
+  cookingTime: "30-40 minutes",
+  servings: "4-5 servings",
+  photos: [soyBeanPorkCapsicumPhoto1, soyBeanPorkCapsicumPhoto2],
+  photoRotations: [180, 0],
+  notes: "The soy bean paste makes it really yummy! Make sure to mix the paste with water before adding to the wok."
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe, whiteRadishSoupRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe, whiteRadishSoupRecipe, soyBeanPorkCapsicumRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
