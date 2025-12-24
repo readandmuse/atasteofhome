@@ -14,6 +14,8 @@ import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
 import eggLongBeansPhoto2 from "@/assets/egg-long-beans-photo-2.jpg";
 import ladyFingersPhoto1 from "@/assets/lady-fingers-photo-1.jpg";
 import ladyFingersPhoto2 from "@/assets/lady-fingers-photo-2.jpg";
+import curryChickenPhoto1 from "@/assets/curry-chicken-photo-1.jpg";
+import curryChickenPhoto2 from "@/assets/curry-chicken-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -163,8 +165,36 @@ const ladyFingersRecipe: Recipe = {
   notes: "CAUTION! DON'T ADD WATER! It will make the dish even more gluey!"
 };
 
+const curryChickenRecipe: Recipe = {
+  id: "sample-6",
+  title: "Curry Chicken 咖喱鸡",
+  description: "Easy to cook, just follow the curry sauce packet! A delicious homestyle curry chicken with potatoes.",
+  ingredients: [
+    "Chicken wings",
+    "Potatoes",
+    "Chicken curry sauce (Brahim's brand)",
+    "Chilli padi",
+    "Onion",
+    "Salt"
+  ],
+  steps: [
+    "Defrost the chicken wings and cut out the fats in the chicken wings first.",
+    "Cut the wing into half.",
+    "Using the pot which is suitable for 炖 stuffs (like the meat with capsicum on previous page), throw in the diced onion and fry it with oil.",
+    "Add salt to the onions and fry it. Together with chilli padi.",
+    "Then put in the chicken wings. Fry them altogether until you see that the meat is cooked. Keep stir-frying it.",
+    "Then add in the chicken curry sauce, all into the pot. Fill up some water into the packet and pour into the pot, to be made as curry gravy. Keep frying it.",
+    "Cover the pot and put it on small fire for about 10 minutes. Let it 炖 for a little while.",
+    "Dish is ready to be served!"
+  ],
+  cookingTime: "30-40 minutes",
+  servings: "4-5 servings",
+  photos: [curryChickenPhoto1, curryChickenPhoto2],
+  notes: "Easy to cook - just follow the curry sauce packet instructions! The key is to let it simmer (炖) for a little while to let the flavors combine."
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe, ladyFingersRecipe, curryChickenRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
