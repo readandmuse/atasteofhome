@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +15,10 @@ interface RecipeViewProps {
 export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const [selectedPhotoRotation, setSelectedPhotoRotation] = useState<number>(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [recipe.id]);
 
   const handlePhotoClick = (photo: string, rotation: number) => {
     setSelectedPhoto(photo);
