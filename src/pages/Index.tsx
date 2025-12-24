@@ -302,9 +302,9 @@ const Index = () => {
         {/* Background Image with blur */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-          style={{ 
+          style={{
             backgroundImage: `url(${heroCover})`,
-            filter: 'blur(3px)'
+            filter: "blur(3px)",
           }}
         />
         {/* Light warm color overlay */}
@@ -315,7 +315,7 @@ const Index = () => {
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
             <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
-              Also known as 家的味道 in Mandarin Chinese. From a daughter who handwrote her mother's homemade
+              Also known as 家的味道 in Mandarin Chinese. From a daughter who had handwritten her mother's homemade
               recipes in 2011 and is now digitising them. May include new ones too.
             </p>
           </div>
@@ -392,7 +392,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
         <div className="relative max-w-5xl mx-auto px-6 py-12 text-center">
-          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care"</p>
+          <p className="font-elegant text-lg text-muted-foreground">"Made with love, preserved with care."</p>
           <div className="w-32 h-0.5 bg-primary/30 mx-auto mt-4"></div>
           <p className="font-sans text-sm text-muted-foreground mt-4">
             Created by{" "}
