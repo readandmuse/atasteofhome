@@ -141,9 +141,9 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
           </DialogContent>
         </Dialog>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="flex flex-col gap-6">
           {/* Ingredients */}
-          <Card className="bg-secondary/30 border-2 border-border h-fit">
+          <Card className="bg-secondary/30 border-2 border-border">
             <CardHeader className="bg-secondary/50 border-b border-border">
               <CardTitle className="font-elegant text-3xl text-primary">
                 Ingredients
@@ -167,9 +167,9 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
           </Card>
 
           {/* Instructions */}
-          <Card className="bg-accent/30 border-2 border-border">
-            <CardHeader className="bg-accent/50 border-b border-border">
-              <CardTitle className="font-elegant text-3xl text-primary">
+          <Card className="bg-instructions/30 border-2 border-border">
+            <CardHeader className="bg-instructions/50 border-b border-border">
+              <CardTitle className="font-elegant text-3xl text-instructions-foreground">
                 Instructions
               </CardTitle>
             </CardHeader>
@@ -177,7 +177,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
               <ol className="space-y-4">
                 {recipe.steps.map((step, index) => (
                   <li key={index} className="flex gap-4">
-                    <span className="font-elegant text-2xl text-primary min-w-8 bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center border border-primary">
+                    <span className="font-elegant text-2xl text-instructions-foreground min-w-8 bg-instructions/60 rounded-full w-8 h-8 flex items-center justify-center border border-instructions-foreground/30">
                       {index + 1}
                     </span>
                     <p className="font-sans text-lg text-foreground leading-relaxed pt-1">
