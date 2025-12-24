@@ -70,7 +70,7 @@ const stewedRiceRecipe: Recipe = {
   cookingTime: "1 hour (plus mushroom soaking time)",
   servings: "4-6 servings",
   photos: [],
-  notes: "Tool: Rice cooker. The key is to fry all the ingredients in the pan before putting everything in the rice cooker to stew. Don't throw away the mushroom soaking water - it's essential for the gravy!"
+  notes: "Use a rice cooker. The key then is to fry all the ingredients in the pan before putting everything in the rice cooker to stew. Also, do not throw away the water that was for soaking the mushrooms - it's essential for the gravy!"
 };
 
 const Index = () => {
