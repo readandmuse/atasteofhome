@@ -22,8 +22,7 @@ export default {
 				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
 				'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-				'signature': ['Satisfy', 'cursive'],
-				'pacifico': ['Pacifico', 'cursive'],
+				'baskerville': ['Libre Baskerville', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
