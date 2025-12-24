@@ -53,7 +53,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
         {/* Recipe Title Card */}
         <Card className="mb-6 bg-gradient-to-r from-card via-secondary/20 to-card border-2 border-border shadow-lg">
           <CardHeader className="text-center py-8">
-            <CardTitle className="font-serif text-5xl text-primary mb-4">
+            <CardTitle className="font-baskerville text-5xl text-primary mb-4">
               {recipe.title}
             </CardTitle>
             {recipe.description && (
