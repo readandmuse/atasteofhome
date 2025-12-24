@@ -304,8 +304,9 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${motherDaughterCover})` }}
         />
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        {/* Warm color overlay to match footer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-orange-800/30 to-amber-700/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
