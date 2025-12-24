@@ -17,6 +17,7 @@ export interface Recipe {
   cookingTime: string;
   servings: string;
   photos: string[];
+  photoRotations?: number[]; // Rotation in degrees for each photo (0, 90, 180, 270)
   notes: string;
 }
 

@@ -14,6 +14,13 @@ interface RecipeViewProps {
 
 export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [selectedPhotoRotation, setSelectedPhotoRotation] = useState<number>(0);
+
+  const handlePhotoClick = (photo: string, rotation: number) => {
+    setSelectedPhoto(photo);
+    setSelectedPhotoRotation(rotation);
+  };
+
   return (
     <div className="min-h-screen bg-background p-4">
       <div className="max-w-4xl mx-auto">
@@ -79,24 +86,28 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {recipe.photos.map((photo, index) => (
-                  <div 
-                    key={index} 
-                    className="relative group cursor-pointer"
-                    onClick={() => setSelectedPhoto(photo)}
-                  >
-                    <img
-                      src={photo}
-                      alt={`${recipe.title} - Photo ${index + 1}`}
-                      className="w-full h-48 object-cover rounded-lg border-2 border-border shadow-sm group-hover:shadow-md group-hover:border-primary/50 transition-all"
-                    />
-                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 rounded-lg transition-colors flex items-center justify-center">
-                      <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity bg-primary/80 px-3 py-1 rounded-full text-sm font-sans">
-                        Click to enlarge
-                      </span>
+                {recipe.photos.map((photo, index) => {
+                  const rotation = recipe.photoRotations?.[index] || 0;
+                  return (
+                    <div 
+                      key={index} 
+                      className="relative group cursor-pointer overflow-hidden rounded-lg border-2 border-border"
+                      onClick={() => handlePhotoClick(photo, rotation)}
+                    >
+                      <img
+                        src={photo}
+                        alt={`${recipe.title} - Photo ${index + 1}`}
+                        className="w-full h-48 object-cover shadow-sm group-hover:shadow-md group-hover:border-primary/50 transition-all"
+                        style={{ transform: `rotate(${rotation}deg)` }}
+                      />
+                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center">
+                        <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity bg-primary/80 px-3 py-1 rounded-full text-sm font-sans">
+                          Click to enlarge
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </CardContent>
           </Card>
@@ -119,6 +130,7 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
                   src={selectedPhoto}
                   alt="Recipe photo enlarged"
                   className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  style={{ transform: `rotate(${selectedPhotoRotation}deg)` }}
                 />
               )}
             </div>

@@ -12,6 +12,7 @@ interface RecipeCardProps {
 
 export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
   const mainPhoto = recipe.photos?.[0];
+  const mainPhotoRotation = recipe.photoRotations?.[0] || 0;
 
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 bg-card border-2 border-border hover:border-primary/30 hover:-translate-y-1">
@@ -21,6 +22,7 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
             src={mainPhoto}
             alt={recipe.title}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            style={{ transform: `rotate(${mainPhotoRotation}deg)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>

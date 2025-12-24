@@ -102,6 +102,7 @@ const abcSoupRecipe: Recipe = {
   cookingTime: "1.5 hours",
   servings: "5-6 servings",
   photos: [abcSoupPhoto1, abcSoupPhoto2],
+  photoRotations: [180, 0], // First photo needs 180 degree rotation
   notes: "The water really carries only main braising soup! Loads of nutrients and vitamins 😊"
 };
 
