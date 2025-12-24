@@ -307,14 +307,14 @@ const Index = () => {
             filter: 'blur(3px)'
           }}
         />
-        {/* Warm color overlay to match footer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-orange-800/30 to-amber-700/40" />
-        <div className="absolute inset-0 bg-background/50" />
+        {/* Light warm color overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/20 via-orange-800/15 to-amber-700/20" />
+        <div className="absolute inset-0 bg-background/40" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
           <div className="text-center">
             <h1 className="font-baskerville text-6xl font-bold text-foreground mb-6 tracking-tight">A Taste of Home</h1>
-            <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed italic">
+            <p className="font-sans text-lg text-foreground max-w-3xl mx-auto leading-relaxed italic">
               Also known as 家的味道 in Mandarin Chinese. From a daughter who handwrote her mother's homemade
               recipes in 2011 and is now digitising them. May include new ones too.
             </p>
