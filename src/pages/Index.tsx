@@ -10,6 +10,8 @@ import sampleIngredients from "@/assets/sample-ingredients.jpg";
 import recipeBookBanner from "@/assets/recipe-book-banner.jpg";
 import abcSoupPhoto1 from "@/assets/abc-soup-photo-1.jpg";
 import abcSoupPhoto2 from "@/assets/abc-soup-photo-2.jpg";
+import eggLongBeansPhoto1 from "@/assets/egg-long-beans-photo-1.jpg";
+import eggLongBeansPhoto2 from "@/assets/egg-long-beans-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -106,8 +108,34 @@ const abcSoupRecipe: Recipe = {
   notes: "The water really carries only main braising soup! Loads of nutrients and vitamins 😊"
 };
 
+const eggLongBeansRecipe: Recipe = {
+  id: "sample-4",
+  title: "Egg and Long Beans 蛋炒四季豆",
+  description: "A simple and delicious stir-fry dish where eggs and long beans come together beautifully. Mummy really good at cooking eggs! 😊",
+  ingredients: [
+    "Eggs (4 to 5)",
+    "Long beans 四季豆",
+    "Salt",
+    "Onion (bigger but diced)",
+    "Light soy sauce"
+  ],
+  steps: [
+    "Add oil into the wok and put the diced (big) onions into the wok first. Fry it fast to prevent it from being burnt.",
+    "Pour some salt onto the plate of cut beans. Beans should be cut like below (two at a time to be more efficient). Slanted and thin.",
+    "Pour altogether in the wok till it has a nice smell.",
+    "Add eggs, beaten with light soy sauce in a bowl, into the wok. The eggs must cover the beans. 'Move' your wok to let it cover beans. Beans must be spread out.",
+    "Fry till it has a little burnt smell. Break the egg and flip it. Separate into pieces after it's fried.",
+    "Dish is ready to be served!"
+  ],
+  cookingTime: "15-20 minutes",
+  servings: "3-4 servings",
+  photos: [eggLongBeansPhoto1, eggLongBeansPhoto2],
+  photoRotations: [180, 0], // First photo needs 180 degree rotation
+  notes: "The key is to fry the onions quickly to avoid burning, and make sure the eggs cover the beans completely before flipping!"
+};
+
 const Index = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe]);
+  const [recipes, setRecipes] = useState<Recipe[]>([sampleRecipe, stewedRiceRecipe, abcSoupRecipe, eggLongBeansRecipe]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
   const [viewingRecipe, setViewingRecipe] = useState<Recipe | undefined>();
