@@ -25,8 +25,10 @@ export const RecipeCard = ({ recipe, onEdit, onView, canEdit = false }: RecipeCa
           <img
             src={mainPhoto}
             alt={recipe.title}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 select-none pointer-events-none"
             style={{ transform: `rotate(${mainPhotoRotation}deg)` }}
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
