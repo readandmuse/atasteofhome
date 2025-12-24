@@ -10,9 +10,10 @@ interface RecipeViewProps {
   recipe: Recipe;
   onEdit: (recipe: Recipe) => void;
   onBack: () => void;
+  canEdit?: boolean;
 }
 
-export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
+export const RecipeView = ({ recipe, onEdit, onBack, canEdit = false }: RecipeViewProps) => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const [selectedPhotoRotation, setSelectedPhotoRotation] = useState<number>(0);
 
@@ -39,15 +40,17 @@ export const RecipeView = ({ recipe, onEdit, onBack }: RecipeViewProps) => {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Recipes
           </Button>
-          <Button
-            onClick={() => onEdit(recipe)}
-            variant="outline"
-            size="sm"
-            className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            <Edit className="w-4 h-4 mr-2" />
-            Edit Recipe
-          </Button>
+          {canEdit && (
+            <Button
+              onClick={() => onEdit(recipe)}
+              variant="outline"
+              size="sm"
+              className="font-sans border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Edit className="w-4 h-4 mr-2" />
+              Edit Recipe
+            </Button>
+          )}
         </div>
 
         {/* Recipe Title Card */}
