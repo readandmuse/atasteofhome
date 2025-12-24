@@ -299,13 +299,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Header with Banner */}
       <div className="relative border-b border-border overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with natural sunlight filter */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${motherDaughterCover})` }}
+          style={{ 
+            backgroundImage: `url(${motherDaughterCover})`,
+            filter: 'saturate(1.1) brightness(1.05) sepia(0.1)'
+          }}
         />
-        {/* Warm color overlay to match footer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/40 via-orange-800/30 to-amber-700/40" />
+        {/* Natural sunlight overlay - cooler tones with subtle warmth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-100/20 via-amber-50/15 to-yellow-100/20" />
         <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-24">
