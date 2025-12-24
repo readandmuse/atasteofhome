@@ -319,7 +319,7 @@ const Index = () => {
               A Taste of Home
             </h1>
             <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Also known as 家的味道 in Mandarin. From a daughter digitalising her mother's homemade recipes handwritten in 2011. New ones too.
+              Also known as 家的味道 in Mandarin Chinese. From a daughter who wrote her mother's homemade recipes by hand in 2011 and now digitalising them. May include new ones too.
             </p>
           </div>
 
