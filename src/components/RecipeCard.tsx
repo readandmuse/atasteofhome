@@ -32,7 +32,7 @@ export const RecipeCard = ({ recipe, onEdit, onView }: RecipeCardProps) => {
       )}
       
       <CardHeader className="pb-3">
-        <CardTitle className="font-pacifico text-2xl text-primary line-clamp-2 hover:text-primary/80 transition-colors">
+        <CardTitle className="font-baskerville text-2xl text-primary line-clamp-2 hover:text-primary/80 transition-colors">
           {recipe.title}
         </CardTitle>
         {recipe.description && (
