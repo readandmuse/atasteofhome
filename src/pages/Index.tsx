@@ -373,10 +373,32 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {recipes.map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
-              ))}
+            {/* Main Dishes */}
+            <div className="mb-16">
+              <h3 className="font-baskerville text-3xl text-primary mb-8 border-b-2 border-primary/20 pb-3">
+                Main Dishes
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {recipes
+                  .filter((r) => !["sample-3", "sample-7"].includes(r.id))
+                  .map((recipe) => (
+                    <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
+                  ))}
+              </div>
+            </div>
+
+            {/* Soups */}
+            <div>
+              <h3 className="font-baskerville text-3xl text-primary mb-8 border-b-2 border-primary/20 pb-3">
+                Soups
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {recipes
+                  .filter((r) => ["sample-3", "sample-7"].includes(r.id))
+                  .map((recipe) => (
+                    <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
+                  ))}
+              </div>
             </div>
           </>
         )}
