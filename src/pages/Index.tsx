@@ -381,6 +381,65 @@ const chilliCrabRecipe: Recipe = {
     "I love the crabs gravy! ❤️ The tapioca flour mixture thickens the gravy beautifully.",
 };
 
+const stewedChickenRecipe: Recipe = {
+  id: "sample-14",
+  title: "Stewed Chicken Wings & Potatoes 鸡腿焖马铃薯",
+  description:
+    "The sauce is... Heavens! ❤️❤️ A comforting stew where chicken wings and potatoes are braised in oyster sauce until tender and flavourful.",
+  ingredients: [
+    "Garlic (3-4 pellets, diced)",
+    "Oil (1 table metal spoon)",
+    "Potatoes (3-4)",
+    "Oyster sauce 蚝油 (2 table metal spoons)",
+    "Chicken meat/wings",
+    "Mushrooms (optional)",
+  ],
+  steps: [
+    "开大火 (biggest fire). Pour oil into the pan to 炒蒜 garlic (pellets) and in pot.",
+    "Cut the chicken wings/meat into smaller pieces so that it is easier to cook.",
+    "Cut the potatoes and put it in the pot. 焖到它变 chaotah, until there is a grilled kind of smell or look on the meat. Cut the potatoes straight down — different way of cutting from ABC Soup.",
+    "Cover the pot with lid after mixing. (For about 1 min)",
+    "Add in the oyster sauce and mix it altogether.",
+    "Pour hot water into the pot to make the sauce. Cover back the pot and put it to small fire. Let it 焖 for about 2 min.",
+    "Dish can be served! Ready!",
+  ],
+  cookingTime: "20-30 minutes",
+  servings: "4-5 servings",
+  photos: [stewedChickenPhoto1, stewedChickenPhoto2],
+  notes:
+    "CAUTION! Don't put cold water for the sauce — use hot water! This prevents the pot from spilling. Use a pot suitable for stewing; it's easier for it to become chaotah! Actually there are no mushrooms for this dish — another similar dish with mushrooms is in the next book!",
+};
+
+const longBeansPorkFishcakeRecipe: Recipe = {
+  id: "sample-15",
+  title: "Long Beans Pork & Fishcake 四季豆炒猪肉鱼饼",
+  description:
+    "记得买瘦肉，不要肥肉！A hearty stir-fry of long beans with sliced pork and fishcake, finished with a light gravy.",
+  ingredients: [
+    "四季豆 Long beans (~30 stalks)",
+    "鱼饼 Fishcake (2)",
+    "瘦肉 Lean pork (~$2.25 worth)",
+    "Salt (~2 teaspoons)",
+    "Garlic (2-3 pellets)",
+    "Water",
+    "Oil",
+  ],
+  steps: [
+    "Wash the 四季豆 (long beans), then pluck the tips on both ends of the beans. After that, pluck/split the beans into ≈ 3/4 pieces.",
+    "Slice the fishcake and meat into thin slices.",
+    "Add oil into the frying pan and cook it over strong/big fire. Add the diced garlic and fry it.",
+    "Then add in the sliced meat and fry it fast so it would cook the meat properly.",
+    "Then add in the salt, then 鱼饼 (fishcake).",
+    "Fry it all well together, after that add the 四季豆. Cover the pan with the cover for about a minute before continuing to fry it again. Fry till the beans are cooked and look drier.",
+    "Then add water to serve as gravy. Cover the pan for about a minute again and dish is ready to be served!",
+  ],
+  cookingTime: "15-20 minutes",
+  servings: "3-4 servings",
+  photos: [longBeansPorkPhoto1, longBeansPorkPhoto2],
+  notes:
+    "Remember to buy lean pork, not fatty pork! (记得买瘦肉，不要肥肉)",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -394,6 +453,8 @@ const Index = () => {
     kailanRecipe,
     steamedFishRecipe,
     chilliCrabRecipe,
+    stewedChickenRecipe,
+    longBeansPorkFishcakeRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
