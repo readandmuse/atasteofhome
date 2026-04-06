@@ -25,6 +25,10 @@ import prawnOnionEggPhoto1 from "@/assets/prawn-onion-egg-photo-1.png";
 import prawnOnionEggPhoto2 from "@/assets/prawn-onion-egg-photo-2.png";
 import kailanPhoto1 from "@/assets/kailan-photo-1.jpg";
 import kailanPhoto2 from "@/assets/kailan-photo-2.jpg";
+import steamedFishPhoto1 from "@/assets/steamed-fish-photo-1.jpg";
+import steamedFishPhoto2 from "@/assets/steamed-fish-photo-2.jpg";
+import chilliCrabPhoto1 from "@/assets/chilli-crab-photo-1.png";
+import chilliCrabPhoto2 from "@/assets/chilli-crab-photo-2.png";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -309,6 +313,70 @@ const kailanRecipe: Recipe = {
     "CAUTION! Put in the onion/garlic and fry it FAST! This is to prevent the onions from turning black and taste bitter afterwards! For thin veggies without stalks, just cook everything together. For stir-fry, cut veggie into three parts (last part is leaves). Drag knife from below stalk all the way up to remove the hard part.",
 };
 
+const steamedFishRecipe: Recipe = {
+  id: "sample-12",
+  title: "Steamed Fish with Rice Cooker 电饭锅蒸鱼",
+  description:
+    "This is really easy! Light but good dish of simplicity! Steam fish while cooking rice — effortless and delicious.",
+  ingredients: [
+    "小葱头 Shallots",
+    "鱼 Fish (Ngoh Hé / any fish that can be steamed)",
+    "Tomatoes (optional)",
+    "麻油 Sesame oil",
+    "Salt",
+    "青葱 / 皮葱 Green/long onions (optional)",
+  ],
+  steps: [
+    "Put a little oil into frying pan and fry the 小葱头 (shallots). Put aside.",
+    "Put the 青葱/葱 (any veggies) on the small plate to be in the rice cooker to prevent the fish from staining the plate with scales.",
+    "Put the fish on the veggies, with a pinch of salt. Spread on the fish.",
+    "Add the tomatoes at the side of the fish (optional).",
+    "Open the rice cooker when the rice is about to be cooked. Rice shouldn't be watery, should be the hardened shape but not totally cooked yet. Put the plate on top.",
+    "When the button for the rice cooker 弹BK上来, 再按多一次 press down again, 在把葱头放 on top of the fish.",
+    "Close the rice cooker and wait for about 10 to 15 minutes before the rice and fish is all ready!",
+  ],
+  cookingTime: "15-20 minutes (with rice)",
+  servings: "2-3 servings",
+  photos: [steamedFishPhoto1, steamedFishPhoto2],
+  notes:
+    "To check whether fish is fresh, check whether eyes are red! This dish cooks simultaneously with rice — super convenient.",
+};
+
+const chilliCrabRecipe: Recipe = {
+  id: "sample-13",
+  title: "Chilli Crab 辣椒炒螃蟹",
+  description:
+    "I love the crabs gravy! ❤️ A classic chilli crab dish with rich, savoury gravy.",
+  ingredients: [
+    "Crabs (4, optional number)",
+    "Eggs (2)",
+    "Onions",
+    "Garlic, diced",
+    "Chilli padi, diced",
+    "Ginger",
+    "Salt",
+    "Oil",
+    "Tapioca flour",
+    "Water",
+  ],
+  steps: [
+    "Fry the crabs first. Add a little salt. Fry the crabs under mid/high fire. Thereafter, take out the crabs.",
+    "Then put the diced garlic and ginger to fry it first. Add in onions and diced chilli after that. Stir-fry them altogether.",
+    "Then add in about half a cup of water into the wok to make the gravy. Add in the mixture of a little bit of tapioca flour and water in a bowl, then mix them all in the wok.",
+    "Add the crabs into the wok and add a little bit of water.",
+    "Cover the wok, for about 1½ – 2 minutes.",
+    "Take out the cover and stir-fry the crabs, put back the cover again.",
+    "Add the eggs into the gravy and break the egg so it becomes like crab-egg kind of texture. Add a little more tapioca flour + water if the gravy is not 'chopy' enough.",
+    "Stir-fry all of it for about 1 min.",
+    "Dish is ready to be served!",
+  ],
+  cookingTime: "20-30 minutes",
+  servings: "4-5 servings",
+  photos: [chilliCrabPhoto1, chilliCrabPhoto2],
+  notes:
+    "I love the crabs gravy! ❤️ The tapioca flour mixture thickens the gravy beautifully.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -320,6 +388,8 @@ const Index = () => {
     melonSoupRecipe,
     prawnOnionEggRecipe,
     kailanRecipe,
+    steamedFishRecipe,
+    chilliCrabRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
