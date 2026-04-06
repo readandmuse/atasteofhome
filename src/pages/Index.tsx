@@ -21,6 +21,8 @@ import soyBeanPorkCapsicumPhoto1 from "@/assets/soy-bean-pork-capsicum-photo-1.j
 import soyBeanPorkCapsicumPhoto2 from "@/assets/soy-bean-pork-capsicum-photo-2.jpg";
 import melonSoupPhoto1 from "@/assets/melon-soup-photo-1.jpg";
 import melonSoupPhoto2 from "@/assets/melon-soup-photo-2.jpg";
+import prawnOnionEggPhoto1 from "@/assets/prawn-onion-egg-photo-1.png";
+import prawnOnionEggPhoto2 from "@/assets/prawn-onion-egg-photo-2.png";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
