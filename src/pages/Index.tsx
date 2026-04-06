@@ -19,6 +19,8 @@ import whiteRadishSoupPhoto1 from "@/assets/white-radish-soup-photo-1.jpg";
 import whiteRadishSoupPhoto2 from "@/assets/white-radish-soup-photo-2.jpg";
 import soyBeanPorkCapsicumPhoto1 from "@/assets/soy-bean-pork-capsicum-photo-1.jpg";
 import soyBeanPorkCapsicumPhoto2 from "@/assets/soy-bean-pork-capsicum-photo-2.jpg";
+import melonSoupPhoto1 from "@/assets/melon-soup-photo-1.jpg";
+import melonSoupPhoto2 from "@/assets/melon-soup-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -220,6 +222,34 @@ const soyBeanPorkCapsicumRecipe: Recipe = {
   notes: "The soy bean paste makes it really yummy! Make sure to mix the paste with water before adding to the wok.",
 };
 
+const melonSoupRecipe: Recipe = {
+  id: "sample-9",
+  title: "Melon Soup 老黄瓜汤",
+  description:
+    "A nourishing and refreshing soup using old cucumber (melon). Same method of cooking soups — just different ingredients used!",
+  ingredients: [
+    "老黄瓜 Melon (1 large piece)",
+    "Red carrots (2)",
+    "Corn (2, optional)",
+    "排骨 Spare ribs (1 packet, any pork)",
+  ],
+  steps: [
+    "Fill the pot about 3/4 of water and let it boil.",
+    "Cut the melon into half, then the 'halved' into another half.",
+    "Scrap off the carrots skin, cut them into ABC soup-like shapes.",
+    "Scrap the melon seeds off and cut them into smaller parts.",
+    "Cut the corn into parts after washing it.",
+    "Put all into the boiling water.",
+    "Wash the spare ribs and pour some boiling water into the plate of spare ribs to kill the bacteria.",
+    "Boil the soup for about 2 hours. Soup is ready!",
+  ],
+  cookingTime: "2-2.5 hours",
+  servings: "5-6 servings",
+  photos: [melonSoupPhoto1, melonSoupPhoto2],
+  notes:
+    "The method of boiling/cooking is the same as White Radish Soup (白萝卜汤), just different ingredients used!",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -228,6 +258,7 @@ const Index = () => {
     curryChickenRecipe,
     whiteRadishSoupRecipe,
     soyBeanPorkCapsicumRecipe,
+    melonSoupRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
@@ -380,7 +411,7 @@ const Index = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recipes
-                  .filter((r) => !["sample-3", "sample-7"].includes(r.id))
+                  .filter((r) => !["sample-3", "sample-7", "sample-9"].includes(r.id))
                   .map((recipe) => (
                     <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
                   ))}
@@ -394,7 +425,7 @@ const Index = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {recipes
-                  .filter((r) => ["sample-3", "sample-7"].includes(r.id))
+                  .filter((r) => ["sample-3", "sample-7", "sample-9"].includes(r.id))
                   .map((recipe) => (
                     <RecipeCard key={recipe.id} recipe={recipe} onEdit={handleEditRecipe} onView={handleViewRecipe} />
                   ))}
