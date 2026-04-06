@@ -23,6 +23,8 @@ import melonSoupPhoto1 from "@/assets/melon-soup-photo-1.jpg";
 import melonSoupPhoto2 from "@/assets/melon-soup-photo-2.jpg";
 import prawnOnionEggPhoto1 from "@/assets/prawn-onion-egg-photo-1.png";
 import prawnOnionEggPhoto2 from "@/assets/prawn-onion-egg-photo-2.png";
+import kailanPhoto1 from "@/assets/kailan-photo-1.jpg";
+import kailanPhoto2 from "@/assets/kailan-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
