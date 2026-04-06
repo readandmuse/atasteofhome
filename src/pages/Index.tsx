@@ -21,6 +21,8 @@ import soyBeanPorkCapsicumPhoto1 from "@/assets/soy-bean-pork-capsicum-photo-1.j
 import soyBeanPorkCapsicumPhoto2 from "@/assets/soy-bean-pork-capsicum-photo-2.jpg";
 import melonSoupPhoto1 from "@/assets/melon-soup-photo-1.jpg";
 import melonSoupPhoto2 from "@/assets/melon-soup-photo-2.jpg";
+import prawnOnionEggPhoto1 from "@/assets/prawn-onion-egg-photo-1.png";
+import prawnOnionEggPhoto2 from "@/assets/prawn-onion-egg-photo-2.png";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -250,6 +252,34 @@ const melonSoupRecipe: Recipe = {
     "The method of boiling/cooking is the same as White Radish Soup (白萝卜汤), just different ingredients used!",
 };
 
+const prawnOnionEggRecipe: Recipe = {
+  id: "sample-10",
+  title: "Prawn Onion Egg 洋葱虾炒鸡蛋",
+  description:
+    "The prawns and eggs... 😊 A simple and delicious stir-fry with fragrant onions, fresh prawns, and fluffy eggs.",
+  ingredients: [
+    "洋葱 Big onion",
+    "虾 Prawns (about 6 to 7)",
+    "Eggs (4)",
+    "Salt",
+    "Soy sauce",
+    "Oil",
+  ],
+  steps: [
+    "Put oil into the frying pan. Then put in the 洋葱 (onion), fry it till a fragrant smell is detected. Make sure you mix it evenly in the pan.",
+    "Then add salt to the onions.",
+    "Then add the prawns, fry it together with the onions fast as it gets cooked fast.",
+    "Add the eggs, beaten with light soy sauce in a bowl, into the pan, after spreading the onions and prawns out in the pan. Do not move the pan.",
+    "Make sure the base of the egg is cooked before you cut and flip it over. Let it fry for a little while.",
+    "Dish is ready to be served!",
+  ],
+  cookingTime: "10-15 minutes",
+  servings: "3-4 servings",
+  photos: [prawnOnionEggPhoto1, prawnOnionEggPhoto2],
+  notes:
+    "Fry the prawns fast as they cook quickly! Make sure the egg base is fully cooked before flipping.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -259,6 +289,7 @@ const Index = () => {
     whiteRadishSoupRecipe,
     soyBeanPorkCapsicumRecipe,
     melonSoupRecipe,
+    prawnOnionEggRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
