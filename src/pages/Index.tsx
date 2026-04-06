@@ -282,6 +282,33 @@ const prawnOnionEggRecipe: Recipe = {
     "Fry the prawns fast as they cook quickly! Make sure the egg base is fully cooked before flipping.",
 };
 
+const kailanRecipe: Recipe = {
+  id: "sample-11",
+  title: "Stir-fried Kailan 炒芥兰/蓝",
+  description:
+    "It's easy! But need lots of oil. A simple stir-fried kailan (Chinese broccoli) with garlic.",
+  ingredients: [
+    "芥兰/蓝 Kailan (2 baskets from market, or any veggies)",
+    "Oil (about 4 metal tablespoons)",
+    "Salt (1½ teaspoons)",
+    "Garlic (5 to 7 pellets)",
+  ],
+  steps: [
+    "Pour in the oil to the wok.",
+    "爆香 garlic (after putting in the garlic).",
+    "Put in salt, then the stalks first. If there are a lot of stalks, add them second.",
+    "Put the veggies in, leaves first.",
+    "Stir-fry it first, then add in the stalks (rest/leftovers).",
+    "Stir-fry it again.",
+    "Dish is ready to be served!",
+  ],
+  cookingTime: "10-15 minutes",
+  servings: "3-4 servings",
+  photos: [kailanPhoto1, kailanPhoto2],
+  notes:
+    "CAUTION! Put in the onion/garlic and fry it FAST! This is to prevent the onions from turning black and taste bitter afterwards! For thin veggies without stalks, just cook everything together. For stir-fry, cut veggie into three parts (last part is leaves). Drag knife from below stalk all the way up to remove the hard part.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -292,6 +319,7 @@ const Index = () => {
     soyBeanPorkCapsicumRecipe,
     melonSoupRecipe,
     prawnOnionEggRecipe,
+    kailanRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
