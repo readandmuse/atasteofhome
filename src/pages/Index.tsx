@@ -388,6 +388,8 @@ const Index = () => {
     melonSoupRecipe,
     prawnOnionEggRecipe,
     kailanRecipe,
+    steamedFishRecipe,
+    chilliCrabRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
