@@ -518,12 +518,12 @@ const meeHoonKuayRecipe: Recipe = {
   description:
     "A comforting Malaysian classic — hand-torn flour pieces in a savoury ikan bilis soup with chicken stock, garlic, onion and fresh veggies, served with chilli padi soy sauce on the side.",
   ingredients: [
-    "For the mee hoon kuay (dough):",
+    "For the mee hoon kuay (dough for noodles):",
     "Flour 面粉",
     "Egg 鸡蛋 (1 粒)",
     "Cooking oil 油 — to make the batter smooth",
     "Water",
-    "For the soup:",
+    "For making the soup:",
     "Ikan bilis (for cooking soup base)",
     "Cooking oil 油",
     "Garlic",
@@ -531,9 +531,9 @@ const meeHoonKuayRecipe: Recipe = {
     "Chicken stock cubes (2 块)",
     "大头菜 (preserved vegetable)",
     "Water",
-    "To finish:",
+    "Remaining ingredients:",
     "Veggies (any type)",
-    "Chilli padi (with soy sauce, on the side)",
+    "Chilli padi",
   ],
   steps: [
     "Mix all the dough ingredients (flour, egg, cooking oil, water) into a big bowl. 搓 (knead) harder until it feels like dough.",
