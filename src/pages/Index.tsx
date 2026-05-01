@@ -673,7 +673,7 @@ const yongTauFooRecipe: Recipe = {
   ],
   cookingTime: "1.5–2 hours (plus filling rest time)",
   servings: "5-6 servings",
-  photos: [yongTauFooPhoto1, yongTauFooPhoto2, yongTauFooPhoto3, yongTauFooPhoto4],
+  photos: [yongTauFooPhoto2, yongTauFooPhoto3, yongTauFooPhoto1, yongTauFooPhoto4],
   notes:
     "A lot of work is needed — but so worth it! ⚠️ Don't put your hand in while mixing the filling — use a spoon, the meat sticks to your hand. ⚠️ Caution when frying — the oil will splatter! Make the filling a few hours ahead and rest it in the fridge for the best flavour.",
 };
