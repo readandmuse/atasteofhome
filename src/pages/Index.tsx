@@ -33,6 +33,8 @@ import stewedChickenPhoto1 from "@/assets/stewed-chicken-photo-1.jpg";
 import stewedChickenPhoto2 from "@/assets/stewed-chicken-photo-2.jpg";
 import longBeansPorkPhoto1 from "@/assets/long-beans-pork-photo-1.png";
 import longBeansPorkPhoto2 from "@/assets/long-beans-pork-photo-2.png";
+import belachanPetaiPhoto1 from "@/assets/belachan-petai-photo-1.jpg";
+import belachanPetaiPhoto2 from "@/assets/belachan-petai-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -440,6 +442,40 @@ const longBeansPorkFishcakeRecipe: Recipe = {
     "Remember to buy lean pork, not fatty pork! (记得买瘦肉，不要肥肉)",
 };
 
+const belachanPetaiRecipe: Recipe = {
+  id: "sample-16",
+  title: "Belachan Petai 炒臭豆",
+  description:
+    "A classic Malaysian stir-fry of petai (stink beans) with fragrant belachan, garlic, and onion. So SHIOK with rice!",
+  ingredients: [
+    "臭豆 Petai (stink beans), shelled",
+    "Garlic",
+    "Big onion",
+    "Chilli padi",
+    "Belachan sauce (shrimp paste)",
+    "鱼露 Fish sauce (optional)",
+    "Dark soya sauce",
+    "虾米 Dried shrimp (optional)",
+    "Salt",
+    "Oil",
+  ],
+  steps: [
+    "Pour oil into the wok and add the garlic. Fry it first until fragrant.",
+    "Pour in the big onion (sliced the same way as for onions in boiling soups). Fry altogether for a while.",
+    "Add 鱼露 (fish sauce) at this stage if using.",
+    "If using belachan sauce, add it in now and fry it well.",
+    "If no belachan sauce is used, add the petai (臭豆) first and fry it before adding the diced chilli padi.",
+    "Add a little water to act as the gravy.",
+    "Fry everything together for about 5 to 10 minutes.",
+    "Taste and adjust seasoning with salt or dark soya sauce if needed. Dish is ready to be served!",
+  ],
+  cookingTime: "15 minutes",
+  servings: "3-4 servings",
+  photos: [belachanPetaiPhoto1, belachanPetaiPhoto2],
+  notes:
+    "Pairs perfectly with steamed rice — so SHIOK! Adjust chilli padi to taste.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -455,6 +491,7 @@ const Index = () => {
     chilliCrabRecipe,
     stewedChickenRecipe,
     longBeansPorkFishcakeRecipe,
+    belachanPetaiRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
