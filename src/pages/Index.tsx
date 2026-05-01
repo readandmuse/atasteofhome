@@ -565,6 +565,7 @@ const guangFuVermicelliRecipe: Recipe = {
     "For the prawn soup base:",
     "Prawn heads",
     "Prawn bodies",
+    "Pork",
     "Oil",
     "Garlic (diced)",
     "Onion (diced)",
@@ -602,7 +603,7 @@ const guangFuVermicelliRecipe: Recipe = {
   servings: "4-5 servings",
   photos: [guangFuVermicelliPhoto1, guangFuVermicelliPhoto2, guangFuVermicelliPhoto3],
   notes:
-    "Recipe from 小姨张 in Penjom — similar way of cooking hor fun. Frying the dried 米粉 till chao tah first is what gives this dish its signature smoky, fragrant base.",
+    "Recipe from 小姨张 in Penjom — similar way of cooking hor fun. Frying the dried 米粉 till chao tah first is what gives this dish its signature smoky, fragrant base. Note: pork isn't on the original handwritten ingredients list — it was missed out, but it's used in the cooking steps, so it's been added here.",
 };
 
 const Index = () => {
