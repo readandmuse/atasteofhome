@@ -478,6 +478,37 @@ const belachanPetaiRecipe: Recipe = {
     "Pairs perfectly with steamed rice — so SHIOK! Adjust chilli padi to taste.",
 };
 
+const stirFriedPrawnsRecipe: Recipe = {
+  id: "sample-17",
+  title: "Stir-fried Prawns 炒蚝油虾",
+  description:
+    "It's kinda easy... NICE too! Big prawns stir-fried with purple onion, spring onion, and Lee Kum Kee oyster sauce.",
+  ingredients: [
+    "Big prawns (½ kg)",
+    "Oyster sauce (3 tablespoons, Lee Kum Kee)",
+    "Spring onion 青葱",
+    "Purple onion 小葱头",
+    "Lettuce (optional, for serving)",
+    "Oil",
+  ],
+  steps: [
+    "Prep the prawns: cut off the hard & sharp part on the head, trim the feelers, and turn over to cut off all the legs.",
+    "Stir-fry the prawns until they change colour (from black to orange).",
+    "Dice the purple onions. Cut the spring onions into short sections.",
+    "Dish out the prawns and add the purple onions to the pan.",
+    "Fry the onions and add in 3 tablespoons of oyster sauce (Lee Kum Kee).",
+    "Add in all the spring onions.",
+    "Finally, add the prawns back in and stir-fry everything together.",
+    "(Optional) Lay lettuce on the serving plate, then top with the prawns.",
+    "Dish is ready to be served!",
+  ],
+  cookingTime: "15 minutes",
+  servings: "3-4 servings",
+  photos: [stirFriedPrawnsPhoto1, stirFriedPrawnsPhoto2],
+  notes:
+    "Use Lee Kum Kee oyster sauce for the best flavour. Don't overcook the prawns — pull them out once they turn orange and finish them with the sauce at the end.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -494,6 +525,7 @@ const Index = () => {
     stewedChickenRecipe,
     longBeansPorkFishcakeRecipe,
     belachanPetaiRecipe,
+    stirFriedPrawnsRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
