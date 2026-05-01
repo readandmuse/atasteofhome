@@ -40,6 +40,9 @@ import stirFriedPrawnsPhoto2 from "@/assets/stir-fried-prawns-photo-2.jpg";
 import meeHoonKuayPhoto1 from "@/assets/mee-hoon-kuay-photo-1.jpg";
 import meeHoonKuayPhoto2 from "@/assets/mee-hoon-kuay-photo-2.jpg";
 import meeHoonKuayPhoto3 from "@/assets/mee-hoon-kuay-photo-3.jpg";
+import guangFuVermicelliPhoto1 from "@/assets/guang-fu-vermicelli-photo-1.jpg";
+import guangFuVermicelliPhoto2 from "@/assets/guang-fu-vermicelli-photo-2.jpg";
+import guangFuVermicelliPhoto3 from "@/assets/guang-fu-vermicelli-photo-3.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -553,6 +556,55 @@ const meeHoonKuayRecipe: Recipe = {
     "Recipe from Malaysia! Knead the dough until it really feels like proper dough — that's what gives the mee hoon kuay its lovely chewy bite. Adjust the heat depending on how many you're feeding.",
 };
 
+const guangFuVermicelliRecipe: Recipe = {
+  id: "sample-19",
+  title: "Guang Fu Fried Vermicelli 炒米粉",
+  description:
+    "Recipe from 小姨张, Penjom! A hearty fried 米粉 cooked in a similar way to hor fun — dried vermicelli is wok-fried until fragrant, then bathed in a rich prawn-head soup with eggs, veggies and a savoury soy-and-tapioca finish.",
+  ingredients: [
+    "For the prawn soup base:",
+    "Prawn heads",
+    "Prawn bodies",
+    "Oil",
+    "Garlic (diced)",
+    "Onion (diced)",
+    "Salt",
+    "MSG",
+    "Water",
+    "For seasoning:",
+    "Light soy sauce",
+    "Dark soy sauce",
+    "Sugar (2 tablespoons)",
+    "Pepper",
+    "For the vermicelli:",
+    "米粉 (dried rice vermicelli)",
+    "Oil",
+    "Eggs",
+    "Tapioca flour (mixed with water)",
+    "Spring onion",
+    "Veggies (any type)",
+  ],
+  steps: [
+    "Add oil into the wok and fry the dried 米粉 till it's chao tah (nicely fragrant). Then put it aside into a bowl.",
+    "Fry the prawn heads with cooking oil together in the wok (after washing it, or use a new one). Fill a pot full of water and set aside for boiling. Put the fried prawn heads into the pot of boiled water.",
+    "Then fry garlic and onion in the wok till it has a nice smell. Put in the prawn bodies and pork into the wok and cook it under 大火 (high heat). After that, pour some of the pot of soup with prawn heads into the wok. Fill the wok full with soup and wait till it boils.",
+    "Add salt into the wok. Mix it with a ladle to melt the salt completely. Test the flavour with a spoon first.",
+    "Put black/dark soy sauce into the wok.",
+    "Next, add tapioca flour into a bowl and add water to mix it with chopsticks.",
+    "Pour the bowl of eggs into the wok. This would make it starchy, look like hor fun.",
+    "Pour in the MSG.",
+    "Put in the veggies but don't keep them in the wok for too long.",
+    "Pour the soup into the cooked 'chao tah' 米粉.",
+    "Put pepper and spring onion in the bowl of 米粉.",
+    "Dish is ready to be served!",
+  ],
+  cookingTime: "45 minutes",
+  servings: "4-5 servings",
+  photos: [guangFuVermicelliPhoto1, guangFuVermicelliPhoto2, guangFuVermicelliPhoto3],
+  notes:
+    "Recipe from 小姨张 in Penjom — similar way of cooking hor fun. Frying the dried 米粉 till chao tah first is what gives this dish its signature smoky, fragrant base.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -571,6 +623,7 @@ const Index = () => {
     belachanPetaiRecipe,
     stirFriedPrawnsRecipe,
     meeHoonKuayRecipe,
+    guangFuVermicelliRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
