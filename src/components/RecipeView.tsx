@@ -158,17 +158,30 @@ export const RecipeView = ({ recipe, onEdit, onBack, canEdit = false }: RecipeVi
             </CardHeader>
             <CardContent className="p-6">
               <ul className="space-y-3">
-                {recipe.ingredients.map((ingredient, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 font-sans text-lg text-foreground"
-                  >
-                    <span className="font-elegant text-primary text-xl min-w-6">
-                      •
-                    </span>
-                    <span>{ingredient}</span>
-                  </li>
-                ))}
+                {recipe.ingredients.map((ingredient, index) => {
+                  const isHeading = ingredient.trim().endsWith(":");
+                  if (isHeading) {
+                    return (
+                      <li
+                        key={index}
+                        className={`font-elegant text-xl text-primary ${index > 0 ? "pt-4" : ""}`}
+                      >
+                        {ingredient}
+                      </li>
+                    );
+                  }
+                  return (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 font-sans text-lg text-foreground"
+                    >
+                      <span className="font-elegant text-primary text-xl min-w-6">
+                        •
+                      </span>
+                      <span>{ingredient}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </CardContent>
           </Card>
