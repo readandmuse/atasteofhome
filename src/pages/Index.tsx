@@ -35,6 +35,8 @@ import longBeansPorkPhoto1 from "@/assets/long-beans-pork-photo-1.png";
 import longBeansPorkPhoto2 from "@/assets/long-beans-pork-photo-2.png";
 import belachanPetaiPhoto1 from "@/assets/belachan-petai-photo-1.jpg";
 import belachanPetaiPhoto2 from "@/assets/belachan-petai-photo-2.jpg";
+import stirFriedPrawnsPhoto1 from "@/assets/stir-fried-prawns-photo-1.jpg";
+import stirFriedPrawnsPhoto2 from "@/assets/stir-fried-prawns-photo-2.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
