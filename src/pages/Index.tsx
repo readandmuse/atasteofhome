@@ -37,6 +37,9 @@ import belachanPetaiPhoto1 from "@/assets/belachan-petai-photo-1.jpg";
 import belachanPetaiPhoto2 from "@/assets/belachan-petai-photo-2.jpg";
 import stirFriedPrawnsPhoto1 from "@/assets/stir-fried-prawns-photo-1.jpg";
 import stirFriedPrawnsPhoto2 from "@/assets/stir-fried-prawns-photo-2.jpg";
+import meeHoonKuayPhoto1 from "@/assets/mee-hoon-kuay-photo-1.jpg";
+import meeHoonKuayPhoto2 from "@/assets/mee-hoon-kuay-photo-2.jpg";
+import meeHoonKuayPhoto3 from "@/assets/mee-hoon-kuay-photo-3.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -509,6 +512,47 @@ const stirFriedPrawnsRecipe: Recipe = {
     "Use Lee Kum Kee oyster sauce for the best flavour. Don't overcook the prawns — pull them out once they turn orange and finish them with the sauce at the end.",
 };
 
+const meeHoonKuayRecipe: Recipe = {
+  id: "sample-18",
+  title: "Handmade Mee Hoon Kuay 手工米粉粿",
+  description:
+    "A comforting Malaysian classic — hand-torn flour pieces in a savoury ikan bilis soup with chicken stock, garlic, onion and fresh veggies, served with chilli padi soy sauce on the side.",
+  ingredients: [
+    "For the mee hoon kuay (dough):",
+    "Flour 面粉",
+    "Egg 鸡蛋 (1 粒)",
+    "Cooking oil 油 — to make the batter smooth",
+    "Water",
+    "For the soup:",
+    "Ikan bilis (for cooking soup base)",
+    "Cooking oil 油",
+    "Garlic",
+    "Onion",
+    "Chicken stock cubes (2 块)",
+    "大头菜 (preserved vegetable)",
+    "Water",
+    "To finish:",
+    "Veggies (any type)",
+    "Chilli padi (with soy sauce, on the side)",
+  ],
+  steps: [
+    "Mix all the dough ingredients (flour, egg, cooking oil, water) into a big bowl. 搓 (knead) harder until it feels like dough.",
+    "After mixing everything, leave it aside for half an hour to let it ferment / rest.",
+    "Add all the soup ingredients (ikan bilis, garlic, onion, 大头菜) into a wok with oil. Fry it all until it's a bit 焦 (chao tah / nicely fragrant). Then pour in the water and add the chicken stock cubes.",
+    "Water poured into the wok must be pretty much filling up the wok. Fire must be on 小火 (low heat).",
+    "Then add all the mee hoon kuay. Using your hands, take one bunch and press it flat so it becomes larger and flatter. Tear the mee hoon kuay into big cube-sized pieces (like how you'd normally eat them) and drop them into the wok.",
+    "Allow the soup and mee hoon kuay to boil for a little while — 小火 if serving a few people, 大火 if you are serving many.",
+    "Then add the veggies into the soup and let it boil for about 5–10 minutes.",
+    "Cut the chilli padi (diced) and add soy sauce into a saucer.",
+    "Dish is ready to be served with the accompaniment of soy sauce!",
+  ],
+  cookingTime: "1 hour (incl. 30 min rest)",
+  servings: "3-4 servings",
+  photos: [meeHoonKuayPhoto1, meeHoonKuayPhoto2, meeHoonKuayPhoto3],
+  notes:
+    "Recipe from Malaysia! Knead the dough until it really feels like proper dough — that's what gives the mee hoon kuay its lovely chewy bite. Adjust the heat depending on how many you're feeding.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -526,6 +570,7 @@ const Index = () => {
     longBeansPorkFishcakeRecipe,
     belachanPetaiRecipe,
     stirFriedPrawnsRecipe,
+    meeHoonKuayRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
