@@ -43,6 +43,10 @@ import meeHoonKuayPhoto3 from "@/assets/mee-hoon-kuay-photo-3.jpg";
 import guangFuVermicelliPhoto1 from "@/assets/guang-fu-vermicelli-photo-1.jpg";
 import guangFuVermicelliPhoto2 from "@/assets/guang-fu-vermicelli-photo-2.jpg";
 import guangFuVermicelliPhoto3 from "@/assets/guang-fu-vermicelli-photo-3.jpg";
+import yongTauFooPhoto1 from "@/assets/yong-tau-foo-photo-1.jpg";
+import yongTauFooPhoto2 from "@/assets/yong-tau-foo-photo-2.jpg";
+import yongTauFooPhoto3 from "@/assets/yong-tau-foo-photo-3.jpg";
+import yongTauFooPhoto4 from "@/assets/yong-tau-foo-photo-4.jpg";
 import { Link } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -606,6 +610,74 @@ const guangFuVermicelliRecipe: Recipe = {
     "Recipe from 小姨张 in Penjom — similar way of cooking hor fun. Frying the dried 米粉 till chao tah first is what gives this dish its signature smoky, fragrant base. Note: pork isn't on the original handwritten ingredients list — it was missed out, but it's used in the cooking steps, so it's been added here.",
 };
 
+const yongTauFooRecipe: Recipe = {
+  id: "sample-20",
+  title: "Homemade Yong Tau Foo 酿豆腐",
+  description:
+    "A labour of love — savoury minced pork and fish meat filling, seasoned with five-spice and sesame oil, stuffed into tau pok, tau kwa and big chillies, then pan-fried and simmered in a 豆酱 (salted bean) sauce.",
+  ingredients: [
+    "For the meat filling:",
+    "Spring onion 青葱 (40¢)",
+    "Minced pork (½ packets / 800g)",
+    "Fish meat 鱼肉 (1 packet)",
+    "Pepper (2 times drop)",
+    "Sesame oil (4 drops)",
+    "五香粉 (½ teaspoon, spiced powder)",
+    "Salt (½ table/metal spoon)",
+    "Black soy sauce (1 teaspoon)",
+    "Light soya sauce (½ teaspoon)",
+    "For the cooking:",
+    "Tofu puff (Tau Pok) — 3 packets of small puffs",
+    "Tau Kwa 豆干 (1 packet of 4)",
+    "Big chilli (4 or 5)",
+    "Crushed salted beans 豆酱 (1½ tablespoons)",
+    "Bitter gourd (optional)",
+    "Tomato (optional)",
+    "Water",
+  ],
+  steps: [
+    "Filling — done a few hours before cooking. Put minced pork and 鱼肉 together in a big bowl.",
+    "Wash the spring onion.",
+    "Cut spring onion into small, not-sooo-fine shapes (side view).",
+    "Add ½ tablespoon of salt.",
+    "Add 4 drops of sesame oil.",
+    "Next, 2 times drop / 少许 of pepper.",
+    "Then, ½ tsp of 五香粉.",
+    "Add 1 tsp of black soya sauce.",
+    "Mix everything together in the bowl. (Use a spoon — don't use your hand, the meat sticks!)",
+    "Add ½ tsp of light soya sauce.",
+    "Add ½ amount of spring onion into the mixture first.",
+    "Continue mixing.",
+    "After the 1st round of mixing, add the other ½ of spring onions.",
+    "Mix evenly.",
+    "Filling is done! Cover the bowl and put in the fridge.",
+    "Cooking — cut the 豆干 in half diagonally into triangular shapes.",
+    "Dig a hole into the middle of the Tau Kwas.",
+    "Put the tofu that is dug out into the meat filling.",
+    "Open up a hole in the Tau Poks too.",
+    "Fill the holes in the Tau Kwa and Tau Pok with the meat filling and tofu.",
+    "Cut open the chillies and dig out the seeds.",
+    "Fill the chillies with the filling. Not recommendable to put the tofu fillings inside — just the meat filling will do.",
+    "Add a few drops of oil into a pan.",
+    "Put the 豆干 with meat filling all into the pan to fry.",
+    "When a nice brown colour on the 豆干 is seen, stop frying and put them onto a pan or plate.",
+    "Put the chilli fillings (meat) into the frying pan. Face the meat filling in the chilli down in the oil to fry it.",
+    "When a nice brown colour is seen on the meat filling, take the chilli out and put on a small plate.",
+    "Add 1½ tablespoons of 豆酱 into a bowl. Add water filled up to half of the bowl. Stir the mixture.",
+    "Scrape the black oily part in the frying pan. Rinse pan with water.",
+    "Put all the 豆干 and Tau Pok into the frying pan.",
+    "Pour the mixture of water and crushed salted beans into the frying pan.",
+    "Adjust to mid-fire. Cover the frying pan and let it boil for 10 minutes.",
+    "Then adjust to small fire. 焖 (mēn) for 5 minutes.",
+    "Chilli with meat on the plate is put in the rice cooker after rice is cooked. Dish is ready to be served!",
+  ],
+  cookingTime: "1.5–2 hours (plus filling rest time)",
+  servings: "5-6 servings",
+  photos: [yongTauFooPhoto1, yongTauFooPhoto2, yongTauFooPhoto3, yongTauFooPhoto4],
+  notes:
+    "A lot of work is needed — but so worth it! ⚠️ Don't put your hand in while mixing the filling — use a spoon, the meat sticks to your hand. ⚠️ Caution when frying — the oil will splatter! Make the filling a few hours ahead and rest it in the fridge for the best flavour.",
+};
+
 const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([
     abcSoupRecipe,
@@ -625,6 +697,7 @@ const Index = () => {
     stirFriedPrawnsRecipe,
     meeHoonKuayRecipe,
     guangFuVermicelliRecipe,
+    yongTauFooRecipe,
   ]);
   const [currentView, setCurrentView] = useState<"list" | "form" | "view">("list");
   const [editingRecipe, setEditingRecipe] = useState<Recipe | undefined>();
