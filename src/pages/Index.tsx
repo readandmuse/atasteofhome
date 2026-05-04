@@ -671,7 +671,7 @@ const yongTauFooRecipe: Recipe = {
     "Then adjust to small fire. 焖 (mēn) for 5 minutes.",
     "Chilli with meat on the plate is put in the rice cooker after rice is cooked. Dish is ready to be served!",
   ],
-  cookingTime: "1.5–2 hours (plus filling rest time)",
+  cookingTime: "1.5–2 hours (Includes meat filling step)",
   servings: "5-6 servings",
   photos: [yongTauFooPhoto2, yongTauFooPhoto3, yongTauFooPhoto1, yongTauFooPhoto4],
   notes:
